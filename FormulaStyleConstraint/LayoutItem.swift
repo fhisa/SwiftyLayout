@@ -33,19 +33,8 @@ public func + (var lhs: LayoutItem, rhs: CGFloat) -> LayoutItem {
     return lhs
 }
 
-public func - (var lhs: LayoutItem, rhs: CGFloat) -> LayoutItem {
-    lhs.constant -= rhs
-    return lhs
-}
-
 public func +(lhs: CGFloat, var rhs: LayoutItem) -> LayoutItem {
     return rhs + lhs
-}
-
-public func - (lhs: CGFloat, var rhs: LayoutItem) -> LayoutItem {
-    rhs.multiplier *= -1.0
-    rhs.constant += lhs
-    return rhs
 }
 
 public func * (var lhs: LayoutItem, rhs: CGFloat) -> LayoutItem {
@@ -56,6 +45,11 @@ public func * (var lhs: LayoutItem, rhs: CGFloat) -> LayoutItem {
 
 public func * (lhs: CGFloat, var rhs: LayoutItem) -> LayoutItem {
     return rhs * lhs
+}
+
+public func - (var lhs: LayoutItem, rhs: CGFloat) -> LayoutItem {
+    lhs.constant -= rhs
+    return lhs
 }
 
 public func == (lhs: LayoutItem, rhs: LayoutItem) -> NSLayoutConstraint {

@@ -39,7 +39,13 @@ NSLayoutConstraint(
 
 ### 制約項 (ConstraintTerm)
 
-制約項(ConstraintTerm)は、レイアウト制約の右辺または左辺を表す構造体で、以下のように定義されています:
+制約項(ConstraintTerm)とは、レイアウト制約の右辺または左辺で、ビューを含む項のことです。
+あるビュー`viewA`の横幅を表す制約項は:
+```swift
+viewA[.Width]
+```
+と記述します。`.Width`のところには`NSLayoutAttribute`型の値が入ります。
+制約項は、以下のような構造体として定義されています:
 ```swift
 public struct ConstraintTerm
 {
@@ -49,18 +55,6 @@ public struct ConstraintTerm
     var constant: CGFloat = 0.0
 }
 ```
-
-#### 制約項の生成
-
-あるビュー`viewA`の横幅を表す ConstraintTerm は通常:
-```swift
-ConstraintTerm(view: viewA, attribute: .Width)
-```
- のように生成できますが、よりシンプルな記法として:
- ```swift
- viewA[.Width]
- ```
- で生成することができます。
 
 ### 二項演算子リスト
 

@@ -34,4 +34,4 @@ viewA[.Width] * 3.0 == viewA[.Height] * 4.0
 
 ## リファレンス
 
-まだ書いていません。使い方は、サンプルアプリやテストケースのコードを参考にしてください。
+まだ書いていません。使い方は、[サンプルアプリ](https://github.com/fhisa/FormulaStyleConstraint/blob/master/SampleApp/ViewController.swift)や[テストケース](https://github.com/fhisa/FormulaStyleConstraint/blob/master/FormulaStyleConstraintTests/FormulaStyleConstraintTests.swift)のコードを参考にしてください。

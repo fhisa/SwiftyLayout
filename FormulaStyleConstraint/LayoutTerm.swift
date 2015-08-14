@@ -1,5 +1,5 @@
 //
-//  LayoutItem.swift
+//  LayoutTerm.swift
 //  FormulaStyleConstraint
 //
 //  Created by fhisa on 2015/08/13.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct LayoutItem
+public struct LayoutTerm
 {
     let view: UIView?
     let attribute: NSLayoutAttribute
@@ -28,63 +28,63 @@ public struct LayoutItem
     }
 }
 
-public func + (var lhs: LayoutItem, rhs: CGFloat) -> LayoutItem {
+public func + (var lhs: LayoutTerm, rhs: CGFloat) -> LayoutTerm {
     lhs.constant += rhs
     return lhs
 }
 
-public func +(lhs: CGFloat, var rhs: LayoutItem) -> LayoutItem {
+public func +(lhs: CGFloat, var rhs: LayoutTerm) -> LayoutTerm {
     return rhs + lhs
 }
 
-public func * (var lhs: LayoutItem, rhs: CGFloat) -> LayoutItem {
+public func * (var lhs: LayoutTerm, rhs: CGFloat) -> LayoutTerm {
     lhs.multiplier *= rhs
     lhs.constant *= rhs
     return lhs
 }
 
-public func * (lhs: CGFloat, var rhs: LayoutItem) -> LayoutItem {
+public func * (lhs: CGFloat, var rhs: LayoutTerm) -> LayoutTerm {
     return rhs * lhs
 }
 
-public func - (var lhs: LayoutItem, rhs: CGFloat) -> LayoutItem {
+public func - (var lhs: LayoutTerm, rhs: CGFloat) -> LayoutTerm {
     lhs.constant -= rhs
     return lhs
 }
 
-public func == (lhs: LayoutItem, rhs: LayoutItem) -> NSLayoutConstraint {
+public func == (lhs: LayoutTerm, rhs: LayoutTerm) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, .Equal, rhs)
 }
 
-public func <= (lhs: LayoutItem, rhs: LayoutItem) -> NSLayoutConstraint {
+public func <= (lhs: LayoutTerm, rhs: LayoutTerm) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, .LessThanOrEqual, rhs)
 }
 
-public func >= (lhs: LayoutItem, rhs: LayoutItem) -> NSLayoutConstraint {
+public func >= (lhs: LayoutTerm, rhs: LayoutTerm) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, .GreaterThanOrEqual, rhs)
 }
 
-public func == (lhs: LayoutItem, rhs: CGFloat) -> NSLayoutConstraint {
+public func == (lhs: LayoutTerm, rhs: CGFloat) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, .Equal, rhs)
 }
 
-public func <= (lhs: LayoutItem, rhs: CGFloat) -> NSLayoutConstraint {
+public func <= (lhs: LayoutTerm, rhs: CGFloat) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, .LessThanOrEqual, rhs)
 }
 
-public func >= (lhs: LayoutItem, rhs: CGFloat) -> NSLayoutConstraint {
+public func >= (lhs: LayoutTerm, rhs: CGFloat) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, .GreaterThanOrEqual, rhs)
 }
 
-public func == (lhs: CGFloat, rhs: LayoutItem) -> NSLayoutConstraint {
+public func == (lhs: CGFloat, rhs: LayoutTerm) -> NSLayoutConstraint {
     return rhs == lhs
 }
 
-public func <= (lhs: CGFloat, rhs: LayoutItem) -> NSLayoutConstraint {
+public func <= (lhs: CGFloat, rhs: LayoutTerm) -> NSLayoutConstraint {
     return rhs >= lhs
 }
 
-public func >= (lhs: CGFloat, rhs: LayoutItem) -> NSLayoutConstraint {
+public func >= (lhs: CGFloat, rhs: LayoutTerm) -> NSLayoutConstraint {
     return rhs <= lhs
 }
 
@@ -92,7 +92,7 @@ public func >= (lhs: CGFloat, rhs: LayoutItem) -> NSLayoutConstraint {
 
 // MARK: - private function
 
-private func createLayoutConstraint(lhs: LayoutItem, relatedBy: NSLayoutRelation, rhs: LayoutItem) -> NSLayoutConstraint {
+private func createLayoutConstraint(lhs: LayoutTerm, relatedBy: NSLayoutRelation, rhs: LayoutTerm) -> NSLayoutConstraint {
     let multiplier = rhs.multiplier / lhs.multiplier
     let constant = (rhs.constant - lhs.constant) / lhs.multiplier
     let constraint = NSLayoutConstraint(
@@ -103,7 +103,7 @@ private func createLayoutConstraint(lhs: LayoutItem, relatedBy: NSLayoutRelation
     return constraint
 }
 
-private func createLayoutConstraint(lhs: LayoutItem, relatedBy: NSLayoutRelation, rhs: CGFloat) -> NSLayoutConstraint {
+private func createLayoutConstraint(lhs: LayoutTerm, relatedBy: NSLayoutRelation, rhs: CGFloat) -> NSLayoutConstraint {
     let constant = (rhs - lhs.constant) / lhs.multiplier
     let constraint = NSLayoutConstraint(
         item: lhs.view!, attribute: lhs.attribute,

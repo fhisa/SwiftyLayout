@@ -164,6 +164,17 @@ class FormulaStyleConstraintTests: XCTestCase {
         XCTAssertEqual(constraint.constant, 4.0)
     }
 
+    func test_view1_equal_view2_subtract_constant() {
+        let constraint = (view1[.Width] == view2[.Width] - 4.0)
+        XCTAssertEqual(constraint.firstItem as! UIView, view1)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(constraint.relation, NSLayoutRelation.Equal)
+        XCTAssertEqual(constraint.secondItem as! UIView, view2)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(constraint.multiplier, 1.0)
+        XCTAssertEqual(constraint.constant, -4.0)
+    }
+
     func test_view1_equal_constant_multiply_view2_add_constant() {
         let constraint = (view1[.Width] == 0.5 * view2[.Width] + 4.0)
         XCTAssertEqual(constraint.firstItem as! UIView, view1)
@@ -184,6 +195,28 @@ class FormulaStyleConstraintTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.Width)
         XCTAssertEqual(constraint.multiplier, 0.5)
         XCTAssertEqual(constraint.constant, 4.0)
+    }
+
+    func test_view1_equal_constant_multiply_view2_subtract_constant() {
+        let constraint = (view1[.Width] == 0.5 * view2[.Width] - 4.0)
+        XCTAssertEqual(constraint.firstItem as! UIView, view1)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(constraint.relation, NSLayoutRelation.Equal)
+        XCTAssertEqual(constraint.secondItem as! UIView, view2)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(constraint.multiplier, 0.5)
+        XCTAssertEqual(constraint.constant, -4.0)
+    }
+
+    func test_view1_equal_view2_multiply_constant_subtract_constant() {
+        let constraint = (view1[.Width] == view2[.Width] * 0.5 - 4.0)
+        XCTAssertEqual(constraint.firstItem as! UIView, view1)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(constraint.relation, NSLayoutRelation.Equal)
+        XCTAssertEqual(constraint.secondItem as! UIView, view2)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(constraint.multiplier, 0.5)
+        XCTAssertEqual(constraint.constant, -4.0)
     }
 
     func test_ratio() {

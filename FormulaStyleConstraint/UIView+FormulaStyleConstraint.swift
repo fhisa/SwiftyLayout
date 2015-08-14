@@ -9,11 +9,11 @@
 import UIKit
 
 public extension UIView {
-    public func layout(attribute: NSLayoutAttribute) -> LayoutTerm {
-        return LayoutTerm(view: self, attribute: attribute)
+    public func layout(attribute: NSLayoutAttribute) -> ConstraintTerm {
+        return ConstraintTerm(view: self, attribute: attribute)
     }
 
-    public subscript(attribute: NSLayoutAttribute) -> LayoutTerm {
+    public subscript(attribute: NSLayoutAttribute) -> ConstraintTerm {
         return layout(attribute)
     }
 }

@@ -10,7 +10,7 @@
 		CC9D95291B7C8A0600A6AD58 /* FormulaStyleConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = CC9D95281B7C8A0600A6AD58 /* FormulaStyleConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC9D952F1B7C8A0600A6AD58 /* FormulaStyleConstraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D95231B7C8A0600A6AD58 /* FormulaStyleConstraint.framework */; };
 		CC9D95361B7C8A0600A6AD58 /* FormulaStyleConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D95351B7C8A0600A6AD58 /* FormulaStyleConstraintTests.swift */; };
-		CC9D95401B7C8A4700A6AD58 /* LayoutTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D953F1B7C8A4700A6AD58 /* LayoutTerm.swift */; };
+		CC9D95401B7C8A4700A6AD58 /* ConstraintTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D953F1B7C8A4700A6AD58 /* ConstraintTerm.swift */; };
 		CC9D95421B7C8A9900A6AD58 /* UIView+FormulaStyleConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D95411B7C8A9900A6AD58 /* UIView+FormulaStyleConstraint.swift */; };
 		CC9D954C1B7CAB7700A6AD58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D954B1B7CAB7700A6AD58 /* AppDelegate.swift */; };
 		CC9D954E1B7CAB7700A6AD58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D954D1B7CAB7700A6AD58 /* ViewController.swift */; };
@@ -37,7 +37,7 @@
 		CC9D952E1B7C8A0600A6AD58 /* FormulaStyleConstraintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormulaStyleConstraintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9D95341B7C8A0600A6AD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC9D95351B7C8A0600A6AD58 /* FormulaStyleConstraintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaStyleConstraintTests.swift; sourceTree = "<group>"; };
-		CC9D953F1B7C8A4700A6AD58 /* LayoutTerm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutTerm.swift; sourceTree = "<group>"; };
+		CC9D953F1B7C8A4700A6AD58 /* ConstraintTerm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintTerm.swift; sourceTree = "<group>"; };
 		CC9D95411B7C8A9900A6AD58 /* UIView+FormulaStyleConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+FormulaStyleConstraint.swift"; sourceTree = "<group>"; };
 		CC9D95471B7CAB7600A6AD58 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9D954A1B7CAB7700A6AD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		CC9D95251B7C8A0600A6AD58 /* FormulaStyleConstraint */ = {
 			isa = PBXGroup;
 			children = (
-				CC9D953F1B7C8A4700A6AD58 /* LayoutTerm.swift */,
+				CC9D953F1B7C8A4700A6AD58 /* ConstraintTerm.swift */,
 				CC9D95411B7C8A9900A6AD58 /* UIView+FormulaStyleConstraint.swift */,
 				CC9D95261B7C8A0600A6AD58 /* Supporting Files */,
 			);
@@ -292,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9D95421B7C8A9900A6AD58 /* UIView+FormulaStyleConstraint.swift in Sources */,
-				CC9D95401B7C8A4700A6AD58 /* LayoutTerm.swift in Sources */,
+				CC9D95401B7C8A4700A6AD58 /* ConstraintTerm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

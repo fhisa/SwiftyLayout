@@ -62,12 +62,10 @@ public struct ConstraintTerm
 
 ### Binary Operators
 
-(*In the following table, "constant" means CGFloat value*)
-
-create a layout constraint that "lhs is less than or equal to lhs"
+*The following table, CONSTANT means CGFloat value*
 
 | operator | lhs | rhs | value | semantics |
-|:-----:|:---------------|:--|:--|:--|
+|:-----:|:---------------|:---------------|:---------------|:--|
 | +     | ConstraintTerm | CONSTANT       | ConstraintTerm | add rhs value to lhs.constant |
 | +     | CONSTANT       | ConstraintTerm | ConstraintTerm | add lhs value to rhs.constant |
 | -     | ConstraintTerm | CONSTANT       | ConstraintTerm | subtract rhs value from lhs.constant |
@@ -82,6 +80,7 @@ create a layout constraint that "lhs is less than or equal to lhs"
 | >=    | ConstraintTerm | ConstraintTerm | NSLayoutConstraint | create a layout constraint that "lhs is greater than or equal to lhs" |
 | >=    | ConstraintTerm | CONSTANT       | NSLayoutConstraint | ditto |
 | >=    | CONSTANT       | ConstraintTerm | NSLayoutConstraint | ditto |
+| ~     | NSLayoutConstraint | CONSTANT(Float) | NSLayoutConstraint | Change priority of a layout constraint, and return the constraint |
 
 ## license
 

@@ -18,6 +18,7 @@
 		CC9D95531B7CAB7700A6AD58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9D95521B7CAB7700A6AD58 /* Images.xcassets */; };
 		CC9D95561B7CAB7700A6AD58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC9D95541B7CAB7700A6AD58 /* LaunchScreen.xib */; };
 		CC9D95691B7CABCD00A6AD58 /* FormulaStyleConstraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D95231B7C8A0600A6AD58 /* FormulaStyleConstraint.framework */; };
+		CCDD9D5E1B8142A300C3C421 /* NSLayoutConstraint+FormulaStyleConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDD9D5D1B8142A300C3C421 /* NSLayoutConstraint+FormulaStyleConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,10 @@
 		CC9D95501B7CAB7700A6AD58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC9D95521B7CAB7700A6AD58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CC9D95551B7CAB7700A6AD58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CCDD9D5D1B8142A300C3C421 /* NSLayoutConstraint+FormulaStyleConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+FormulaStyleConstraint.swift"; sourceTree = "<group>"; };
+		CCDD9D5F1B8153FA00C3C421 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CCDD9D601B8153FA00C3C421 /* README-ja.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README-ja.md"; sourceTree = "<group>"; };
+		CCDD9D611B81540B00C3C421 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,7 @@
 		CC9D95191B7C8A0600A6AD58 = {
 			isa = PBXGroup;
 			children = (
+				CCDD9D621B81541900C3C421 /* Documents */,
 				CC9D95251B7C8A0600A6AD58 /* FormulaStyleConstraint */,
 				CC9D95321B7C8A0600A6AD58 /* FormulaStyleConstraintTests */,
 				CC9D95481B7CAB7700A6AD58 /* SampleApp */,
@@ -100,6 +106,7 @@
 			children = (
 				CC9D953F1B7C8A4700A6AD58 /* ConstraintTerm.swift */,
 				CC9D95411B7C8A9900A6AD58 /* UIView+FormulaStyleConstraint.swift */,
+				CCDD9D5D1B8142A300C3C421 /* NSLayoutConstraint+FormulaStyleConstraint.swift */,
 				CC9D95261B7C8A0600A6AD58 /* Supporting Files */,
 			);
 			path = FormulaStyleConstraint;
@@ -150,6 +157,16 @@
 				CC9D954A1B7CAB7700A6AD58 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCDD9D621B81541900C3C421 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				CCDD9D5F1B8153FA00C3C421 /* README.md */,
+				CCDD9D601B8153FA00C3C421 /* README-ja.md */,
+				CCDD9D611B81540B00C3C421 /* LICENSE */,
+			);
+			name = Documents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +310,7 @@
 			files = (
 				CC9D95421B7C8A9900A6AD58 /* UIView+FormulaStyleConstraint.swift in Sources */,
 				CC9D95401B7C8A4700A6AD58 /* ConstraintTerm.swift in Sources */,
+				CCDD9D5E1B8142A300C3C421 /* NSLayoutConstraint+FormulaStyleConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

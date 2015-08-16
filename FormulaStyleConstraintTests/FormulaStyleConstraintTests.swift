@@ -229,5 +229,15 @@ class FormulaStyleConstraintTests: XCTestCase {
         XCTAssertEqual(constraint.multiplier, 16.0 / 8.0)
         XCTAssertEqual(constraint.constant, 0.0)
     }
+
+    func test_default_priority() {
+        let constraint = (view1[.Width] == view2[.Width])
+        XCTAssertEqual((view1[.Width] == view2[.Width]).priority,  1000.0)
+    }
+
+    func test_priority_operator() {
+        let constraint = (view1[.Width] == view2[.Width]) ~ 750.0
+        XCTAssertEqual(constraint.priority,  750.0)
+    }
 }
 

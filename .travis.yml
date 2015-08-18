@@ -1,4 +1,4 @@
 language: objective-c
-
-script:
-    - make clean test
+xcode_project: FormulaStyleConstraint.xcodeproj
+xcode_sdk: iphonesimulator
+xcode_scheme: FormulaStyleConstraint

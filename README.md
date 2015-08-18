@@ -120,11 +120,11 @@ Using [Carthage](https://github.com/Carthage/Carthage), it's easy to add Formula
 ### Copying source files directly (iOS 7)
 
 - Add this repository as a git submodule:
-   ```shell
-   $ git submodule add https://github.com/fhisa/FormulaStyleConstraint.git PATH_TO_SUBMODULE
-   // or
-   $ carthage update --use-submodules
-   ```
+```shell
+$ git submodule add https://github.com/fhisa/FormulaStyleConstraint.git PATH_TO_SUBMODULE
+// or
+$ carthage update --use-submodules
+```
 - Then just add references of FormulaStyleConstraint/*.swift to your Xcode project.
 
 

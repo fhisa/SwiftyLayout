@@ -116,11 +116,11 @@ FormulaStyleConstraint は [Carthage](https://github.com/Carthage/Carthage) を�
 ### ソースファイルを直接コピー (iOS 7)
 
 - Add this repository as a git submodule:
-   ```shell
-   $ git submodule add https://github.com/fhisa/FormulaStyleConstraint.git PATH_TO_SUBMODULE
-   // or
-   $ carthage update --use-submodules
-   ```
+```shell
+$ git submodule add https://github.com/fhisa/FormulaStyleConstraint.git PATH_TO_SUBMODULE
+// or
+$ carthage update --use-submodules
+```
 - Then just add references of FormulaStyleConstraint/*.swift to your Xcode project.
 
 ## TODO

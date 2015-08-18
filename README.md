@@ -1,13 +1,14 @@
-# FormulaStyleConstraint [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/fhisa/FormulaStyleConstraint/master/LICENSE) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+# FormulaStyleConstraint
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/fhisa/FormulaStyleConstraint/master/LICENSE) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+ (*[Japanese](https://github.com/fhisa/FormulaStyleConstraint/blob/master/README-ja.md)*)
 
 FormulaStyleConstraint is a framework to simplify the definition of automatic layout constraints in a Swift program for iOS.
 Using this framework, it is possible to define the automatic layout constraints as a simple equation.
 
-(*[Japanese README](https://github.com/fhisa/FormulaStyleConstraint/blob/master/README-ja.md)*)
-
 ## Code Examples
 
-### Example 1
+### Basic usage
 
 Using the framework, a layout constraint that "the width of the view A is equal to minus 4.0 to 50% of the width of the Views B" follows:
 ```swift
@@ -22,7 +23,7 @@ NSLayoutConstraint(
     multiplier: 0.5, constant: -4.0)
 ```
 
-### Example 2
+### e.g. Aspect ratio
 
 A layout constraint that "the aspect ratio of the view A is 3:4" follows:
 ```swift
@@ -35,6 +36,23 @@ NSLayoutConstraint(
     relatedBy: .Equal,
     toItem: viewA, attribute: .Height,
     multiplier: 4.0/3.0, constant: 0.0)
+```
+
+### e.g. Specify the priority
+
+The framework has priority specification operator `~` like the following.
+```swift
+innerView[.Leading] == outerView[.Leading] + 4.0 ~ 750.0
+```
+This is the same layout constraints with the following code:
+```swift
+let constraint = NSLayoutConstraint(
+    item: innerView, attribute: .Leading,
+    relatedBy: .Equal,
+    toItem: outerView, attribute: .Leading,
+    multiplier: 1.0, constant: 4.0)
+constraint.priority = 750.0
+// -> constraint
 ```
 
 Please refer to the code for the [sample application](https://github.com/fhisa/FormulaStyleConstraint/blob/master/SampleApp/ViewController.swift) and [test case](https://github.com/fhisa/FormulaStyleConstraint/blob/master/FormulaStyleConstraintTests/FormulaStyleConstraintTests.swift), too.
@@ -60,7 +78,7 @@ public struct ConstraintTerm
 }
 ```
 
-### Binary Operators
+### Operators
 
 *The following table, CONSTANT means CGFloat value*
 
@@ -80,8 +98,46 @@ public struct ConstraintTerm
 | >=    | ConstraintTerm | ConstraintTerm | NSLayoutConstraint | create a layout constraint that "lhs is greater than or equal to lhs" |
 | >=    | ConstraintTerm | CONSTANT       | NSLayoutConstraint | ditto |
 | >=    | CONSTANT       | ConstraintTerm | NSLayoutConstraint | ditto |
-| ~     | NSLayoutConstraint | CONSTANT(Float) | NSLayoutConstraint | Change priority of a layout constraint, and return the constraint |
+| ~     | NSLayoutConstraint | CONSTANT(Float) | NSLayoutConstraint | Change the priority of a layout constraint, and return the constraint |
+
+## Requirements
+
+- Swift 1.2 (Xcode 6.3 or later)
+- iOS 8 or later (by Carthage) / iOS 7 (by coping the source files directly)
+
+## Installation
+
+There are two options.
+
+### Using Carthage (iOS 8 or later)
+
+Using [Carthage](https://github.com/Carthage/Carthage), it's easy to add FormulaStyleConstraint to the project.
+
+- Add `github "fhisa/FormulaStyleConstraint"` to your Cartfile.
+- Run `carthage update`
+- Add FormulaStyleConstraint.framework in Carthage/Build/iOS to your Xcode project.
+
+### Copying source files directly (iOS 7)
+
+- Add this repository as a git submodule:
+   ```shell
+   $ git submodule add https://github.com/fhisa/FormulaStyleConstraint.git PATH_TO_SUBMODULE
+   // or
+   $ carthage update --use-submodules
+   ```
+- Then just add references of FormulaStyleConstraint/*.swift to your Xcode project.
+
+
+Mainly the following methods:
+- Use [Carthage](https://github.com/Carthage/Carthage)
+- Git Submodule
+- Add source files directly to a project (for iOS 7)
+
+## TODO
+
+- Mac OS X support
+- [CocoaPods](https://cocoapods.org) support
 
 ## license
 
-MIT license. See the [LICENSE](https://github.com/fhisa/FormulaStyleConstraint/blob/master/LICENSE) file for details.
+FormulaStyleConstraint is released under the [MIT license](https://github.com/fhisa/FormulaStyleConstraint/blob/master/LICENSE).

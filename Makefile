@@ -10,7 +10,7 @@ test:
 	xcodebuild \
 		-project $(PROJECT) \
 		-scheme $(SCHEME) \
-		-sdk iphonesimulator \
+		-sdk iphonesimulator8.1 \
 		-configuration Debug \
 		TEST_AFTER_BUILD=YES \
 		TEST_HOST= \

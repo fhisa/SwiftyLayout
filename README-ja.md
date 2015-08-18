@@ -1,5 +1,5 @@
 # FormulaStyleConstraint
-[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/fhisa/FormulaStyleConstraint/master/LICENSE) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/fhisa/FormulaStyleConstraint/master/LICENSE) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![build passing](https://travis-ci.org/fhisa/FormulaStyleConstraint.png?branch=master)](https://travis-ci.org/fhisa/FormulaStyleConstraint)
 
 FormulaStyleConstraint は、Swift による iOSプログラミングにおいて、レイアウト制約を簡潔な数式のように記述するためのフレームワークです。
 

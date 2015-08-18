@@ -1,6 +1,6 @@
 language: objective-c
-before_script:
-    - brew update && brew upgrade xctool
+# before_script:
+#     - brew update && brew upgrade xctool
 xcode_project: FormulaStyleConstraint.xcodeproj
 xcode_sdk: iphonesimulator
 xcode_scheme: FormulaStyleConstraint

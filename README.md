@@ -1,10 +1,7 @@
 # FormulaStyleConstraint
-[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/fhisa/FormulaStyleConstraint/master/LICENSE) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![build passing](https://travis-ci.org/fhisa/FormulaStyleConstraint.png?branch=master)](https://travis-ci.org/fhisa/FormulaStyleConstraint)
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/fhisa/FormulaStyleConstraint/master/LICENSE) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![build passing](https://travis-ci.org/fhisa/FormulaStyleConstraint.png?branch=master)](https://travis-ci.org/fhisa/FormulaStyleConstraint)  
 
- (*[Japanese](https://github.com/fhisa/FormulaStyleConstraint/blob/master/README-ja.md)*)
-
-FormulaStyleConstraint is a framework to simplify the definition of automatic layout constraints in a Swift program for iOS.
-Using this framework, it is possible to define the automatic layout constraints as a simple equation.
+FormulaStyleConstraint is a framework that allows to describe layout constraints (ie NSLayoutConstraint) as a simple mathematical formula in a Swift program.
 
 ## Code Examples
 
@@ -126,12 +123,6 @@ $ git submodule add https://github.com/fhisa/FormulaStyleConstraint.git PATH_TO_
 $ carthage update --use-submodules
 ```
 - Then just add references of FormulaStyleConstraint/*.swift to your Xcode project.
-
-
-Mainly the following methods:
-- Use [Carthage](https://github.com/Carthage/Carthage)
-- Git Submodule
-- Add source files directly to a project (for iOS 7)
 
 ## TODO
 

@@ -1,5 +1,4 @@
 PROJECT = FormulaStyleConstraint.xcodeproj
-TARGET = FormulaStyleConstraint
 SCHEME = FormulaStyleConstraint
 
 clean:
@@ -7,20 +6,11 @@ clean:
 	xcodebuild -project $(PROJECT) -configuration Release clean
 
 test:
-	xctool \
+	xcodebuild \
 		-project $(PROJECT) \
 		-scheme $(SCHEME) \
 		-sdk iphonesimulator \
- 		-configuration Debug \
-		build \
+		-configuration Debug \
+		TEST_AFTER_BUILD=YES \
+		TEST_HOST= \
 		test
-	
-# test:
-# 	xcodebuild \
-# 		-project $(PROJECT) \
-# 		-scheme $(SCHEME) \
-# 		-sdk iphonesimulator \
-# 		-configuration Debug \
-# 		TEST_AFTER_BUILD=YES \
-# 		TEST_HOST= \
-# 		test

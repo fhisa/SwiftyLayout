@@ -7,11 +7,20 @@ clean:
 	xcodebuild -project $(PROJECT) -configuration Release clean
 
 test:
-	xcodebuild \
+	xctool \
 		-project $(PROJECT) \
 		-scheme $(SCHEME) \
 		-sdk iphonesimulator \
-		-configuration Debug \
-		TEST_AFTER_BUILD=YES \
-		TEST_HOST= \
+ 		-configuration Debug \
+		build \
 		test
+	
+# test:
+# 	xcodebuild \
+# 		-project $(PROJECT) \
+# 		-scheme $(SCHEME) \
+# 		-sdk iphonesimulator \
+# 		-configuration Debug \
+# 		TEST_AFTER_BUILD=YES \
+# 		TEST_HOST= \
+# 		test

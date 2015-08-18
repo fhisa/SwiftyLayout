@@ -62,7 +62,6 @@ class FormulaStyleConstraintTests: XCTestCase {
 
     func test_view1_equal_constant() {
         let constraint = (view1[.Width] == 12345)
-        let firstView = constraint.firstItem as! UIView
         XCTAssertTrue(view1.isEqual(constraint.firstItem))
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.Width)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.Equal)
@@ -73,7 +72,6 @@ class FormulaStyleConstraintTests: XCTestCase {
 
     func test_view1_less_than_or_equal_constant() {
         let constraint = (view1[.Width] <= 12345)
-        let firstView = constraint.firstItem as! UIView
         XCTAssertTrue(view1.isEqual(constraint.firstItem))
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.Width)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.LessThanOrEqual)
@@ -84,7 +82,6 @@ class FormulaStyleConstraintTests: XCTestCase {
 
     func test_view1_greater_than_or_equal_constant() {
         let constraint = (view1[.Width] >= 12345)
-        let firstView = constraint.firstItem as! UIView
         XCTAssertTrue(view1.isEqual(constraint.firstItem))
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.Width)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.GreaterThanOrEqual)
@@ -95,7 +92,6 @@ class FormulaStyleConstraintTests: XCTestCase {
 
     func test_constant_equal_view1() {
         let constraint = (12345 == view1[.Width])
-        let firstView = constraint.firstItem as! UIView
         XCTAssertTrue(view1.isEqual(constraint.firstItem))
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.Width)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.Equal)
@@ -106,7 +102,6 @@ class FormulaStyleConstraintTests: XCTestCase {
 
     func test_constant_less_than_or_equal_view1() {
         let constraint = (12345 <= view1[.Width])
-        let firstView = constraint.firstItem as! UIView
         XCTAssertTrue(view1.isEqual(constraint.firstItem))
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.Width)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.GreaterThanOrEqual)
@@ -117,7 +112,6 @@ class FormulaStyleConstraintTests: XCTestCase {
 
     func test_constant_greater_than_or_equal_view1() {
         let constraint = (12345 >= view1[.Width])
-        let firstView = constraint.firstItem as! UIView
         XCTAssertTrue(view1.isEqual(constraint.firstItem))
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.Width)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.LessThanOrEqual)

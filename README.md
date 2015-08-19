@@ -1,11 +1,11 @@
 # FormulaStyleConstraint
 
-[![Join the chat at https://gitter.im/fhisa/FormulaStyleConstraint](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fhisa/FormulaStyleConstraint?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/fhisa/FormulaStyleConstraint/master/LICENSE)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GitHub version](https://badge.fury.io/gh/fhisa%2FFormulaStyleConstraint.svg)](http://badge.fury.io/gh/fhisa%2FFormulaStyleConstraint)
 [![build passing](https://travis-ci.org/fhisa/FormulaStyleConstraint.png?branch=master)](https://travis-ci.org/fhisa/FormulaStyleConstraint)
+
+[![Join the chat at https://gitter.im/fhisa/FormulaStyleConstraint](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fhisa/FormulaStyleConstraint?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 FormulaStyleConstraint is a framework that allows to describe layout constraints (ie NSLayoutConstraint) as a simple mathematical formula in a Swift program.
 

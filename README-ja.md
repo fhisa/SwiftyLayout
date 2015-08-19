@@ -5,6 +5,8 @@
 [![GitHub version](https://badge.fury.io/gh/fhisa%2FFormulaStyleConstraint.svg)](http://badge.fury.io/gh/fhisa%2FFormulaStyleConstraint)
 [![build passing](https://travis-ci.org/fhisa/FormulaStyleConstraint.png?branch=master)](https://travis-ci.org/fhisa/FormulaStyleConstraint)
 
+[![Join the chat at https://gitter.im/fhisa/FormulaStyleConstraint](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fhisa/FormulaStyleConstraint?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 FormulaStyleConstraint は、Swiftプログラムにおいて、レイアウト制約 (NSLayoutConstraint) を簡単な数式として定義できるようにするフレームワークです。
 
 ## コード例

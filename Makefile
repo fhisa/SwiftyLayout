@@ -2,15 +2,13 @@ PROJECT = FormulaStyleConstraint.xcodeproj
 SCHEME = FormulaStyleConstraint
 
 clean:
-	xcodebuild -project $(PROJECT) -configuration Debug clean
-	xcodebuild -project $(PROJECT) -configuration Release clean
+	xctool -project $(PROJECT) -scheme $(SCHEME) clean
 
 test:
-	xcodebuild \
+	xctool \
 		-project $(PROJECT) \
 		-scheme $(SCHEME) \
 		-sdk iphonesimulator \
 		-configuration Debug \
-		TEST_AFTER_BUILD=YES \
-		TEST_HOST= \
+		build \
 		test

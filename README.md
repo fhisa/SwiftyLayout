@@ -49,7 +49,7 @@ innerView[.Leading] == outerView[.Leading] + 4.0 ~ 750.0
 ```
 This is the same layout constraints with the following code:
 ```swift
-let constraint = NSLayoutConstraint(
+var constraint = NSLayoutConstraint(
     item: innerView, attribute: .Leading,
     relatedBy: .Equal,
     toItem: outerView, attribute: .Leading,

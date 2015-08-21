@@ -47,7 +47,7 @@ innerView[.Leading] == outerView[.Leading] + 4.0 ~ 750.0
 ```
 この演算子は、レイアウト制約の優先順位を設定した上でそのレイアウト制約を返します:
 ```swift
-let constraint = NSLayoutConstraint(
+var constraint = NSLayoutConstraint(
     item: innerView, attribute: .Leading,
     relatedBy: .Equal,
     toItem: outerView, attribute: .Leading,

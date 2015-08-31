@@ -61,7 +61,7 @@ class FormulaStyleConstraintTests: XCTestCase {
     }
 
     func test_view1_equal_constant() {
-        let constraint = (view1[.Width] == 12345.0)
+        var constraint = (view1[.Width] == 12345.0)
         XCTAssertTrue(view1.isEqual(constraint.firstItem))
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.Width)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.Equal)
@@ -238,5 +238,75 @@ class FormulaStyleConstraintTests: XCTestCase {
     func test_priority_operator() {
         let constraint = (view1[.Width] == view2[.Width]) ~ 750.0
         XCTAssertEqual(constraint.priority,  UILayoutPriority(750.0))
+    }
+
+    func test_numeric_type_CGFloat() {
+        var constraint: NSLayoutConstraint
+        constraint = (view1[.Width] == CGFloat(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(123.0))
+        constraint = (CGFloat(123.0) == view1[.Width])
+        XCTAssertEqual(constraint.constant, CGFloat(123.0))
+        constraint = (view1[.Width] == CGFloat(123.0) * view2[.Width] + CGFloat(456.0))
+        XCTAssertEqual(constraint.multiplier, CGFloat(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(456.0))
+        constraint = (view1[.Width] == CGFloat(123.0) * view2[.Width] - CGFloat(456.0))
+        XCTAssertEqual(constraint.multiplier, CGFloat(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(-456.0))
+    }
+
+    func test_numeric_type_Int() {
+        var constraint: NSLayoutConstraint
+        constraint = (view1[.Width] == Int(123))
+        XCTAssertEqual(constraint.constant, CGFloat(123.0))
+        constraint = (Int(123) == view1[.Width])
+        XCTAssertEqual(constraint.constant, CGFloat(123.0))
+        constraint = (view1[.Width] == Int(123) * view2[.Width] + Int(456))
+        XCTAssertEqual(constraint.multiplier, CGFloat(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(456.0))
+        constraint = (view1[.Width] == Int(123) * view2[.Width] - Int(456))
+        XCTAssertEqual(constraint.multiplier, CGFloat(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(-456.0))
+    }
+
+    func test_numeric_type_UInt() {
+        var constraint: NSLayoutConstraint
+        constraint = (view1[.Width] == UInt(123))
+        XCTAssertEqual(constraint.constant, CGFloat(123.0))
+        constraint = (UInt(123) == view1[.Width])
+        XCTAssertEqual(constraint.constant, CGFloat(123.0))
+        constraint = (view1[.Width] == UInt(123) * view2[.Width] + UInt(456))
+        XCTAssertEqual(constraint.multiplier, CGFloat(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(456.0))
+        constraint = (view1[.Width] == UInt(123) * view2[.Width] - UInt(456))
+        XCTAssertEqual(constraint.multiplier, CGFloat(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(-456.0))
+    }
+
+    func test_numeric_type_Float() {
+        var constraint: NSLayoutConstraint
+        constraint = (view1[.Width] == Float(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(123.0))
+        constraint = (Float(123.0) == view1[.Width])
+        XCTAssertEqual(constraint.constant, CGFloat(123.0))
+        constraint = (view1[.Width] == Float(123.0) * view2[.Width] + Float(456.0))
+        XCTAssertEqual(constraint.multiplier, CGFloat(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(456.0))
+        constraint = (view1[.Width] == Float(123.0) * view2[.Width] - Float(456.0))
+        XCTAssertEqual(constraint.multiplier, CGFloat(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(-456.0))
+    }
+
+    func test_numeric_type_Double() {
+        var constraint: NSLayoutConstraint
+        constraint = (view1[.Width] == Double(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(123.0))
+        constraint = (Double(123.0) == view1[.Width])
+        XCTAssertEqual(constraint.constant, CGFloat(123.0))
+        constraint = (view1[.Width] == Double(123.0) * view2[.Width] + Double(456.0))
+        XCTAssertEqual(constraint.multiplier, CGFloat(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(456.0))
+        constraint = (view1[.Width] == Double(123.0) * view2[.Width] - Double(456.0))
+        XCTAssertEqual(constraint.multiplier, CGFloat(123.0))
+        XCTAssertEqual(constraint.constant, CGFloat(-456.0))
     }
 }

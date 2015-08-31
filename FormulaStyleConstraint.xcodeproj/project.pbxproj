@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC4AFE1D1B93C94800C9E01B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4AFE1C1B93C94800C9E01B /* Operators.swift */; };
 		CC9D95291B7C8A0600A6AD58 /* FormulaStyleConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = CC9D95281B7C8A0600A6AD58 /* FormulaStyleConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC9D952F1B7C8A0600A6AD58 /* FormulaStyleConstraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D95231B7C8A0600A6AD58 /* FormulaStyleConstraint.framework */; };
 		CC9D95361B7C8A0600A6AD58 /* FormulaStyleConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D95351B7C8A0600A6AD58 /* FormulaStyleConstraintTests.swift */; };
@@ -18,7 +19,6 @@
 		CC9D95531B7CAB7700A6AD58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9D95521B7CAB7700A6AD58 /* Images.xcassets */; };
 		CC9D95561B7CAB7700A6AD58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC9D95541B7CAB7700A6AD58 /* LaunchScreen.xib */; };
 		CC9D95691B7CABCD00A6AD58 /* FormulaStyleConstraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D95231B7C8A0600A6AD58 /* FormulaStyleConstraint.framework */; };
-		CCDD9D5E1B8142A300C3C421 /* NSLayoutConstraint+FormulaStyleConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDD9D5D1B8142A300C3C421 /* NSLayoutConstraint+FormulaStyleConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC4AFE1C1B93C94800C9E01B /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		CC9D95231B7C8A0600A6AD58 /* FormulaStyleConstraint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormulaStyleConstraint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9D95271B7C8A0600A6AD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC9D95281B7C8A0600A6AD58 /* FormulaStyleConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormulaStyleConstraint.h; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		CC9D95501B7CAB7700A6AD58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC9D95521B7CAB7700A6AD58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CC9D95551B7CAB7700A6AD58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CCDD9D5D1B8142A300C3C421 /* NSLayoutConstraint+FormulaStyleConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+FormulaStyleConstraint.swift"; sourceTree = "<group>"; };
 		CCDD9D5F1B8153FA00C3C421 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CCDD9D601B8153FA00C3C421 /* README-ja.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README-ja.md"; sourceTree = "<group>"; };
 		CCDD9D611B81540B00C3C421 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				CC9D953F1B7C8A4700A6AD58 /* ConstraintTerm.swift */,
+				CC4AFE1C1B93C94800C9E01B /* Operators.swift */,
 				CC9D95411B7C8A9900A6AD58 /* UIView+FormulaStyleConstraint.swift */,
-				CCDD9D5D1B8142A300C3C421 /* NSLayoutConstraint+FormulaStyleConstraint.swift */,
 				CC9D95261B7C8A0600A6AD58 /* Supporting Files */,
 			);
 			path = FormulaStyleConstraint;
@@ -309,8 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9D95421B7C8A9900A6AD58 /* UIView+FormulaStyleConstraint.swift in Sources */,
+				CC4AFE1D1B93C94800C9E01B /* Operators.swift in Sources */,
 				CC9D95401B7C8A4700A6AD58 /* ConstraintTerm.swift in Sources */,
-				CCDD9D5E1B8142A300C3C421 /* NSLayoutConstraint+FormulaStyleConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

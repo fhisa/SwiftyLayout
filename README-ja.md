@@ -130,6 +130,7 @@ $ carthage update --use-submodules
 
 ## TODO
 
+- UILayoutSupport 対応
 - Mac OS X 対応
 - [CocoaPods](https://cocoapods.org) 対応
 

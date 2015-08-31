@@ -36,7 +36,7 @@ public func + (var lhs: ConstraintTerm, rhs: Int) -> ConstraintTerm {
 }
 
 public func +(lhs: Int, var rhs: ConstraintTerm) -> ConstraintTerm {
-    return rhs + CGFloat(lhs)
+    return CGFloat(lhs) + rhs
 }
 
 public func + (var lhs: ConstraintTerm, rhs: UInt) -> ConstraintTerm {
@@ -44,7 +44,7 @@ public func + (var lhs: ConstraintTerm, rhs: UInt) -> ConstraintTerm {
 }
 
 public func +(lhs: UInt, var rhs: ConstraintTerm) -> ConstraintTerm {
-    return rhs + CGFloat(lhs)
+    return CGFloat(lhs) + rhs
 }
 
 public func + (var lhs: ConstraintTerm, rhs: Float) -> ConstraintTerm {
@@ -52,7 +52,7 @@ public func + (var lhs: ConstraintTerm, rhs: Float) -> ConstraintTerm {
 }
 
 public func +(lhs: Float, var rhs: ConstraintTerm) -> ConstraintTerm {
-    return rhs + CGFloat(lhs)
+    return CGFloat(lhs) + rhs
 }
 
 public func + (var lhs: ConstraintTerm, rhs: Double) -> ConstraintTerm {
@@ -60,7 +60,7 @@ public func + (var lhs: ConstraintTerm, rhs: Double) -> ConstraintTerm {
 }
 
 public func +(lhs: Double, var rhs: ConstraintTerm) -> ConstraintTerm {
-    return rhs + CGFloat(lhs)
+    return CGFloat(lhs) + rhs
 }
 
 
@@ -80,7 +80,7 @@ public func * (var lhs: ConstraintTerm, rhs: Int) -> ConstraintTerm {
 }
 
 public func * (lhs: Int, var rhs: ConstraintTerm) -> ConstraintTerm {
-    return rhs * CGFloat(lhs)
+    return CGFloat(lhs) * rhs
 }
 
 public func * (var lhs: ConstraintTerm, rhs: UInt) -> ConstraintTerm {
@@ -88,7 +88,7 @@ public func * (var lhs: ConstraintTerm, rhs: UInt) -> ConstraintTerm {
 }
 
 public func * (lhs: UInt, var rhs: ConstraintTerm) -> ConstraintTerm {
-    return rhs * CGFloat(lhs)
+    return CGFloat(lhs) * rhs
 }
 
 public func * (var lhs: ConstraintTerm, rhs: Float) -> ConstraintTerm {
@@ -96,7 +96,7 @@ public func * (var lhs: ConstraintTerm, rhs: Float) -> ConstraintTerm {
 }
 
 public func * (lhs: Float, var rhs: ConstraintTerm) -> ConstraintTerm {
-    return rhs * CGFloat(lhs)
+    return CGFloat(lhs) * rhs
 }
 
 public func * (var lhs: ConstraintTerm, rhs: Double) -> ConstraintTerm {
@@ -104,7 +104,7 @@ public func * (var lhs: ConstraintTerm, rhs: Double) -> ConstraintTerm {
 }
 
 public func * (lhs: Double, var rhs: ConstraintTerm) -> ConstraintTerm {
-    return rhs * CGFloat(lhs)
+    return CGFloat(lhs) * rhs
 }
 
 
@@ -149,7 +149,7 @@ public func == (lhs: ConstraintTerm, rhs: Int) -> NSLayoutConstraint {
 }
 
 public func == (lhs: Int, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return rhs == CGFloat(lhs)
+    return CGFloat(lhs) == rhs
 }
 
 public func == (lhs: ConstraintTerm, rhs: UInt) -> NSLayoutConstraint {
@@ -157,7 +157,7 @@ public func == (lhs: ConstraintTerm, rhs: UInt) -> NSLayoutConstraint {
 }
 
 public func == (lhs: UInt, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return rhs == CGFloat(lhs)
+    return CGFloat(lhs) == rhs
 }
 
 public func == (lhs: ConstraintTerm, rhs: Float) -> NSLayoutConstraint {
@@ -165,7 +165,7 @@ public func == (lhs: ConstraintTerm, rhs: Float) -> NSLayoutConstraint {
 }
 
 public func == (lhs: Float, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return rhs == CGFloat(lhs)
+    return CGFloat(lhs) == rhs
 }
 
 public func == (lhs: ConstraintTerm, rhs: Double) -> NSLayoutConstraint {
@@ -173,7 +173,7 @@ public func == (lhs: ConstraintTerm, rhs: Double) -> NSLayoutConstraint {
 }
 
 public func == (lhs: Double, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return rhs == CGFloat(lhs)
+    return CGFloat(lhs) == rhs
 }
 
 

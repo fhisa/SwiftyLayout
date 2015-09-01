@@ -27,6 +27,17 @@ class FormulaStyleConstraintTests: XCTestCase {
         super.tearDown()
     }
 
+    func test_default_priority() {
+        let constraint = (view1[.Width] == view2[.Width])
+        XCTAssertEqual((view1[.Width] == view2[.Width]).priority,  UILayoutPriority(1000.0))
+    }
+
+    func test_priority_operator() {
+        var constraint: NSLayoutConstraint
+        constraint = view1[.Width] == view2[.Width] ~ 750.0
+        XCTAssertEqual(constraint.priority,  UILayoutPriority(750.0))
+    }
+
     func test_view1_equal_view2() {
         let constraint = (view1[.Width] == view2[.Width])
         XCTAssertTrue(view1.isEqual(constraint.firstItem))
@@ -228,15 +239,5 @@ class FormulaStyleConstraintTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.Height)
         XCTAssertEqual(constraint.multiplier, CGFloat(16.0 / 8.0))
         XCTAssertEqual(constraint.constant, CGFloat(0.0))
-    }
-
-    func test_default_priority() {
-        let constraint = (view1[.Width] == view2[.Width])
-        XCTAssertEqual((view1[.Width] == view2[.Width]).priority,  UILayoutPriority(1000.0))
-    }
-
-    func test_priority_operator() {
-        let constraint = (view1[.Width] == view2[.Width]) ~ 750.0
-        XCTAssertEqual(constraint.priority,  UILayoutPriority(750.0))
     }
 }

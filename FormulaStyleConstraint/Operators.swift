@@ -47,32 +47,32 @@ public func == (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint 
     return createLayoutConstraint(lhs, .Equal, rhs)
 }
 
-public func <= (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, .LessThanOrEqual, rhs)
-}
-
-public func >= (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, .GreaterThanOrEqual, rhs)
-}
-
 public func == (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, .Equal, rhs)
-}
-
-public func <= (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, .LessThanOrEqual, rhs)
-}
-
-public func >= (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, .GreaterThanOrEqual, rhs)
 }
 
 public func == (lhs: CGFloat, rhs: ConstraintTerm) -> NSLayoutConstraint {
     return rhs == lhs
 }
 
+public func <= (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
+    return createLayoutConstraint(lhs, .LessThanOrEqual, rhs)
+}
+
+public func <= (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
+    return createLayoutConstraint(lhs, .LessThanOrEqual, rhs)
+}
+
 public func <= (lhs: CGFloat, rhs: ConstraintTerm) -> NSLayoutConstraint {
     return rhs >= lhs
+}
+
+public func >= (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
+    return createLayoutConstraint(lhs, .GreaterThanOrEqual, rhs)
+}
+
+public func >= (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
+    return createLayoutConstraint(lhs, .GreaterThanOrEqual, rhs)
 }
 
 public func >= (lhs: CGFloat, rhs: ConstraintTerm) -> NSLayoutConstraint {

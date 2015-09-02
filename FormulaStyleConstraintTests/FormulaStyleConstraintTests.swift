@@ -92,10 +92,10 @@ class FormulaStyleConstraintTests: XCTestCase {
         x = view1[.Width] == 1234
         XCTAssertTrue(x.isKindOfClass(NSLayoutConstraint))
         XCTAssertTrue(view1.isEqual(x.firstItem))
-        XCTAssertEqual(x.firstAttribute, .Width)
-        XCTAssertEqual(x.relation, .Equal)
+        XCTAssertEqual(x.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(x.relation, NSLayoutRelation.Equal)
         XCTAssertNil(x.secondItem)
-        XCTAssertEqual(x.secondAttribute, .NotAnAttribute)
+        XCTAssertEqual(x.secondAttribute, NSLayoutAttribute.NotAnAttribute)
         XCTAssertEqual(x.multiplier, CGFloat(1))
         XCTAssertEqual(x.constant, CGFloat(1234))
     }
@@ -104,10 +104,10 @@ class FormulaStyleConstraintTests: XCTestCase {
         x = 1234 == view1[.Width]
         XCTAssertTrue(x.isKindOfClass(NSLayoutConstraint))
         XCTAssertTrue(view1.isEqual(x.firstItem))
-        XCTAssertEqual(x.firstAttribute, .Width)
-        XCTAssertEqual(x.relation, .Equal)
+        XCTAssertEqual(x.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(x.relation, NSLayoutRelation.Equal)
         XCTAssertNil(x.secondItem)
-        XCTAssertEqual(x.secondAttribute, .NotAnAttribute)
+        XCTAssertEqual(x.secondAttribute, NSLayoutAttribute.NotAnAttribute)
         XCTAssertEqual(x.multiplier, CGFloat(1))
         XCTAssertEqual(x.constant, CGFloat(1234))
     }
@@ -116,10 +116,10 @@ class FormulaStyleConstraintTests: XCTestCase {
         x = view1[.Width] == 12 * view2[.Width] + 34
         XCTAssertTrue(x.isKindOfClass(NSLayoutConstraint))
         XCTAssertTrue(view1.isEqual(x.firstItem))
-        XCTAssertEqual(x.firstAttribute, .Width)
-        XCTAssertEqual(x.relation, .Equal)
+        XCTAssertEqual(x.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(x.relation, NSLayoutRelation.Equal)
         XCTAssertTrue(view2.isEqual(x.secondItem))
-        XCTAssertEqual(x.secondAttribute, .Width)
+        XCTAssertEqual(x.secondAttribute, NSLayoutAttribute.Width)
         XCTAssertEqual(x.multiplier, CGFloat(12))
         XCTAssertEqual(x.constant, CGFloat(34))
     }
@@ -128,10 +128,10 @@ class FormulaStyleConstraintTests: XCTestCase {
         x = view1[.Width] <= 1234
         XCTAssertTrue(x.isKindOfClass(NSLayoutConstraint))
         XCTAssertTrue(view1.isEqual(x.firstItem))
-        XCTAssertEqual(x.firstAttribute, .Width)
-        XCTAssertEqual(x.relation, .LessThanOrEqual)
+        XCTAssertEqual(x.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(x.relation, NSLayoutRelation.LessThanOrEqual)
         XCTAssertNil(x.secondItem)
-        XCTAssertEqual(x.secondAttribute, .NotAnAttribute)
+        XCTAssertEqual(x.secondAttribute, NSLayoutAttribute.NotAnAttribute)
         XCTAssertEqual(x.multiplier, CGFloat(1))
         XCTAssertEqual(x.constant, CGFloat(1234))
     }
@@ -140,10 +140,10 @@ class FormulaStyleConstraintTests: XCTestCase {
         x = 1234 <= view1[.Width]
         XCTAssertTrue(x.isKindOfClass(NSLayoutConstraint))
         XCTAssertTrue(view1.isEqual(x.firstItem))
-        XCTAssertEqual(x.firstAttribute, .Width)
-        XCTAssertEqual(x.relation, .GreaterThanOrEqual)
+        XCTAssertEqual(x.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(x.relation, NSLayoutRelation.GreaterThanOrEqual)
         XCTAssertNil(x.secondItem)
-        XCTAssertEqual(x.secondAttribute, .NotAnAttribute)
+        XCTAssertEqual(x.secondAttribute, NSLayoutAttribute.NotAnAttribute)
         XCTAssertEqual(x.multiplier, CGFloat(1))
         XCTAssertEqual(x.constant, CGFloat(1234))
     }
@@ -152,10 +152,10 @@ class FormulaStyleConstraintTests: XCTestCase {
         x = view1[.Width] <= 12 * view2[.Width] + 34
         XCTAssertTrue(x.isKindOfClass(NSLayoutConstraint))
         XCTAssertTrue(view1.isEqual(x.firstItem))
-        XCTAssertEqual(x.firstAttribute, .Width)
-        XCTAssertEqual(x.relation, .LessThanOrEqual)
+        XCTAssertEqual(x.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(x.relation, NSLayoutRelation.LessThanOrEqual)
         XCTAssertTrue(view2.isEqual(x.secondItem))
-        XCTAssertEqual(x.secondAttribute, .Width)
+        XCTAssertEqual(x.secondAttribute, NSLayoutAttribute.Width)
         XCTAssertEqual(x.multiplier, CGFloat(12))
         XCTAssertEqual(x.constant, CGFloat(34))
     }
@@ -164,10 +164,10 @@ class FormulaStyleConstraintTests: XCTestCase {
         x = view1[.Width] >= 1234
         XCTAssertTrue(x.isKindOfClass(NSLayoutConstraint))
         XCTAssertTrue(view1.isEqual(x.firstItem))
-        XCTAssertEqual(x.firstAttribute, .Width)
-        XCTAssertEqual(x.relation, .GreaterThanOrEqual)
+        XCTAssertEqual(x.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(x.relation, NSLayoutRelation.GreaterThanOrEqual)
         XCTAssertNil(x.secondItem)
-        XCTAssertEqual(x.secondAttribute, .NotAnAttribute)
+        XCTAssertEqual(x.secondAttribute, NSLayoutAttribute.NotAnAttribute)
         XCTAssertEqual(x.multiplier, CGFloat(1))
         XCTAssertEqual(x.constant, CGFloat(1234))
     }
@@ -176,10 +176,10 @@ class FormulaStyleConstraintTests: XCTestCase {
         x = 1234 >= view1[.Width]
         XCTAssertTrue(x.isKindOfClass(NSLayoutConstraint))
         XCTAssertTrue(view1.isEqual(x.firstItem))
-        XCTAssertEqual(x.firstAttribute, .Width)
-        XCTAssertEqual(x.relation, .LessThanOrEqual)
+        XCTAssertEqual(x.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(x.relation, NSLayoutRelation.LessThanOrEqual)
         XCTAssertNil(x.secondItem)
-        XCTAssertEqual(x.secondAttribute, .NotAnAttribute)
+        XCTAssertEqual(x.secondAttribute, NSLayoutAttribute.NotAnAttribute)
         XCTAssertEqual(x.multiplier, CGFloat(1))
         XCTAssertEqual(x.constant, CGFloat(1234))
     }
@@ -188,10 +188,10 @@ class FormulaStyleConstraintTests: XCTestCase {
         x = view1[.Width] >= 12 * view2[.Width] + 34
         XCTAssertTrue(x.isKindOfClass(NSLayoutConstraint))
         XCTAssertTrue(view1.isEqual(x.firstItem))
-        XCTAssertEqual(x.firstAttribute, .Width)
-        XCTAssertEqual(x.relation, .GreaterThanOrEqual)
+        XCTAssertEqual(x.firstAttribute, NSLayoutAttribute.Width)
+        XCTAssertEqual(x.relation, NSLayoutRelation.GreaterThanOrEqual)
         XCTAssertTrue(view2.isEqual(x.secondItem))
-        XCTAssertEqual(x.secondAttribute, .Width)
+        XCTAssertEqual(x.secondAttribute, NSLayoutAttribute.Width)
         XCTAssertEqual(x.multiplier, CGFloat(12))
         XCTAssertEqual(x.constant, CGFloat(34))
     }

@@ -21,8 +21,8 @@ class FormulaStyleConstraintTests: XCTestCase {
         x = nil
         view1 = UIView()
         view2 = UIView()
-        view1.setTranslatesAutoresizingMaskIntoConstraints(false)
-        view2.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view1.translatesAutoresizingMaskIntoConstraints = false
+        view2.translatesAutoresizingMaskIntoConstraints = false
     }
 
     override func tearDown() {

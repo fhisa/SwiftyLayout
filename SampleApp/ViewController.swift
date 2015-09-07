@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
         func createView(bgcolor: UIColor) -> UIView {
             let view = UIView()
-            view.setTranslatesAutoresizingMaskIntoConstraints(false)
+            view.translatesAutoresizingMaskIntoConstraints = false
             view.backgroundColor = bgcolor
             view.layer.borderWidth = 1
             view.layer.borderColor = UIColor.redColor().CGColor
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
 
     override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
-        println(__FUNCTION__)
+        print(__FUNCTION__)
         let hSizeClass = traitCollection.horizontalSizeClass
         let vSizeClass = traitCollection.verticalSizeClass
         if hSizeClass == .Compact && vSizeClass == .Regular {
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     }
 
     private func setupTileLayout() {
-        rootView.removeConstraints(rootView.constraints())
+        rootView.removeConstraints(rootView.constraints)
         rootView.addConstraints([
             rightView[.Top] == rootView[.Top] + 4.0,
             rightView[.Trailing] == rootView[.Trailing] - 4.0,
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     }
 
     private func setupSingleLayout() {
-        rootView.removeConstraints(rootView.constraints())
+        rootView.removeConstraints(rootView.constraints)
         rootView.addConstraints([
             rightView[.Top] == rootView[.Top] + 4.0,
             rightView[.Trailing] == rootView[.Trailing] - 4.0,

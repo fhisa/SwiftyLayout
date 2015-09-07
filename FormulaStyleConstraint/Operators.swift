@@ -24,7 +24,7 @@ public func + (var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
     return lhs
 }
 
-public func +(lhs: CGFloat, var rhs: ConstraintTerm) -> ConstraintTerm {
+public func +(lhs: CGFloat, rhs: ConstraintTerm) -> ConstraintTerm {
     return rhs + lhs
 }
 
@@ -34,7 +34,7 @@ public func * (var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
     return lhs
 }
 
-public func * (lhs: CGFloat, var rhs: ConstraintTerm) -> ConstraintTerm {
+public func * (lhs: CGFloat, rhs: ConstraintTerm) -> ConstraintTerm {
     return rhs * lhs
 }
 
@@ -44,11 +44,11 @@ public func - (var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
 }
 
 public func == (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, .Equal, rhs)
+    return createLayoutConstraint(lhs, relatedBy: .Equal, rhs: rhs)
 }
 
 public func == (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, .Equal, rhs)
+    return createLayoutConstraint(lhs, relatedBy: .Equal, rhs: rhs)
 }
 
 public func == (lhs: CGFloat, rhs: ConstraintTerm) -> NSLayoutConstraint {
@@ -56,11 +56,11 @@ public func == (lhs: CGFloat, rhs: ConstraintTerm) -> NSLayoutConstraint {
 }
 
 public func <= (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, .LessThanOrEqual, rhs)
+    return createLayoutConstraint(lhs, relatedBy: .LessThanOrEqual, rhs: rhs)
 }
 
 public func <= (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, .LessThanOrEqual, rhs)
+    return createLayoutConstraint(lhs, relatedBy: .LessThanOrEqual, rhs: rhs)
 }
 
 public func <= (lhs: CGFloat, rhs: ConstraintTerm) -> NSLayoutConstraint {
@@ -68,11 +68,11 @@ public func <= (lhs: CGFloat, rhs: ConstraintTerm) -> NSLayoutConstraint {
 }
 
 public func >= (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, .GreaterThanOrEqual, rhs)
+    return createLayoutConstraint(lhs, relatedBy: .GreaterThanOrEqual, rhs: rhs)
 }
 
 public func >= (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, .GreaterThanOrEqual, rhs)
+    return createLayoutConstraint(lhs, relatedBy: .GreaterThanOrEqual, rhs: rhs)
 }
 
 public func >= (lhs: CGFloat, rhs: ConstraintTerm) -> NSLayoutConstraint {

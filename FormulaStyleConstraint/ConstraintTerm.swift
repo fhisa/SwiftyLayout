@@ -10,13 +10,13 @@ import UIKit
 
 public struct ConstraintTerm
 {
-    let view: UIView?
+    let view: AnyObject?
     let attribute: NSLayoutAttribute
     var multiplier: CGFloat
     var constant: CGFloat
 
     public init(
-        view v: UIView? = nil,
+        view v: AnyObject? = nil,
         attribute a: NSLayoutAttribute = .NotAnAttribute,
         multiplier m: CGFloat = 1.0,
         constant c: CGFloat = 0.0)

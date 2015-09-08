@@ -1,5 +1,5 @@
 //
-//  FormulaStyleConstraintTests.swift
+//  OperatorsWithUIViewTestsTests.swift
 //  FormulaStyleConstraintTests
 //
 //  Created by fhisa on 2015/08/13.
@@ -10,10 +10,11 @@ import UIKit
 import XCTest
 import FormulaStyleConstraint
 
-class FormulaStyleConstraintTests: XCTestCase {
+class OperatorsWithUIViewTests: XCTestCase {
 
     var view1: UIView!
     var view2: UIView!
+    var vc: UIViewController!
     var x: NSLayoutConstraint!
 
     override func setUp() {
@@ -21,6 +22,8 @@ class FormulaStyleConstraintTests: XCTestCase {
         x = nil
         view1 = UIView()
         view2 = UIView()
+        vc = UIViewController()
+        vc.view = UIView()
         view1.translatesAutoresizingMaskIntoConstraints = false
         view2.translatesAutoresizingMaskIntoConstraints = false
     }

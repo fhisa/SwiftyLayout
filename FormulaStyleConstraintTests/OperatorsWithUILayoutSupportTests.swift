@@ -7,23 +7,26 @@
 //
 
 import UIKit
+typealias View = UIView
+typealias ViewController = UIViewController
+
 import XCTest
 import FormulaStyleConstraint
 
 class OperatorsWithUILayoutSupportTests: XCTestCase {
 
-    var view1: UIView!
-    var view2: UIView!
-    var vc: UIViewController!
+    var view1: View!
+    var view2: View!
+    var vc: ViewController!
     var x: NSLayoutConstraint!
 
     override func setUp() {
         super.setUp()
         x = nil
-        view1 = UIView()
-        view2 = UIView()
-        vc = UIViewController()
-        vc.view = UIView()
+        view1 = View()
+        view2 = View()
+        vc = ViewController()
+        vc.view = View()
         view1.translatesAutoresizingMaskIntoConstraints = false
         view2.translatesAutoresizingMaskIntoConstraints = false
     }

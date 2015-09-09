@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC9D95221B7C8A0600A6AD58"
+               BlueprintIdentifier = "CCAF770E1B9FD0E80046AE7A"
                BuildableName = "FormulaStyleConstraint.framework"
-               BlueprintName = "FormulaStyleConstraint"
-               ReferencedContainer = "container:FormulaStyleConstraint.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC9D952D1B7C8A0600A6AD58"
-               BuildableName = "FormulaStyleConstraintTests.xctest"
-               BlueprintName = "FormulaStyleConstraintTests"
+               BlueprintName = "FormulaStyleConstraint-Mac"
                ReferencedContainer = "container:FormulaStyleConstraint.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC9D952D1B7C8A0600A6AD58"
-               BuildableName = "FormulaStyleConstraintTests.xctest"
-               BlueprintName = "FormulaStyleConstraintTests"
+               BlueprintIdentifier = "CCAF77171B9FD0E80046AE7A"
+               BuildableName = "FormulaStyleConstraintTests-Mac.xctest"
+               BlueprintName = "FormulaStyleConstraintTests-Mac"
                ReferencedContainer = "container:FormulaStyleConstraint.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC9D95221B7C8A0600A6AD58"
+            BlueprintIdentifier = "CCAF770E1B9FD0E80046AE7A"
             BuildableName = "FormulaStyleConstraint.framework"
-            BlueprintName = "FormulaStyleConstraint"
+            BlueprintName = "FormulaStyleConstraint-Mac"
             ReferencedContainer = "container:FormulaStyleConstraint.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -78,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC9D95221B7C8A0600A6AD58"
+            BlueprintIdentifier = "CCAF770E1B9FD0E80046AE7A"
             BuildableName = "FormulaStyleConstraint.framework"
-            BlueprintName = "FormulaStyleConstraint"
+            BlueprintName = "FormulaStyleConstraint-Mac"
             ReferencedContainer = "container:FormulaStyleConstraint.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -96,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC9D95221B7C8A0600A6AD58"
+            BlueprintIdentifier = "CCAF770E1B9FD0E80046AE7A"
             BuildableName = "FormulaStyleConstraint.framework"
-            BlueprintName = "FormulaStyleConstraint"
+            BlueprintName = "FormulaStyleConstraint-Mac"
             ReferencedContainer = "container:FormulaStyleConstraint.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

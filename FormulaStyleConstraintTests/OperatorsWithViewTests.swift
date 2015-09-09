@@ -1,29 +1,39 @@
 //
-//  OperatorsWithUIViewTestsTests.swift
+//  OperatorsWithViewTestsTests.swift
 //  FormulaStyleConstraintTests
 //
 //  Created by fhisa on 2015/08/13.
 //  Copyright (c) 2015 Hisakuni Fujimoto. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+
+    import UIKit
+    typealias View = UIView
+    typealias LayoutPriority = UILayoutPriority
+
+    #else
+
+    import AppKit
+    typealias View = NSView
+    typealias LayoutPriority = NSLayoutPriority
+
+#endif
+
 import XCTest
 import FormulaStyleConstraint
 
 class OperatorsWithUIViewTests: XCTestCase {
 
-    var view1: UIView!
-    var view2: UIView!
-    var vc: UIViewController!
+    var view1: View!
+    var view2: View!
     var x: NSLayoutConstraint!
 
     override func setUp() {
         super.setUp()
         x = nil
-        view1 = UIView()
-        view2 = UIView()
-        vc = UIViewController()
-        vc.view = UIView()
+        view1 = View()
+        view2 = View()
         view1.translatesAutoresizingMaskIntoConstraints = false
         view2.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -34,11 +44,11 @@ class OperatorsWithUIViewTests: XCTestCase {
 
     func test_priority_operator() {
         x = view1[.Width] == view2[.Width]
-        XCTAssertEqual(x.priority,  UILayoutPriority(1000))
+        XCTAssertEqual(x.priority,  LayoutPriority(1000))
         x = view1[.Width] == view2[.Width] ~ 750
-        XCTAssertEqual(x.priority,  UILayoutPriority(750))
+        XCTAssertEqual(x.priority,  LayoutPriority(750))
         x = view1[.Width] == view2[.Width] ~ 750.0
-        XCTAssertEqual(x.priority,  UILayoutPriority(750))
+        XCTAssertEqual(x.priority,  LayoutPriority(750))
     }
 
     func test_operator_term_add_constant() {

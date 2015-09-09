@@ -2,11 +2,16 @@
 //  FormulaStyleConstraint.h
 //  FormulaStyleConstraint
 //
-//  Created by fhisa on 2015/08/13.
-//  Copyright (c) 2015年 Hisakuni Fujimoto. All rights reserved.
+//  Created by fhisa on 2015/09/09.
+//  Copyright © 2015 Hisakuni Fujimoto. All rights reserved.
 //
+#import <TargetConditionals.h>
 
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#else
+#import <AppKit/AppKit.h>
+#endif
 
 //! Project version number for FormulaStyleConstraint.
 FOUNDATION_EXPORT double FormulaStyleConstraintVersionNumber;

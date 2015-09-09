@@ -6,7 +6,17 @@
 //  Copyright (c) 2015 Hisakuni Fujimoto. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+
+    import UIKit
+    public typealias LayoutPriority = UILayoutPriority
+
+    #else
+
+    import AppKit
+    public typealias LayoutPriority = NSLayoutPriority
+
+#endif
 
 
 infix operator ~ {
@@ -14,7 +24,7 @@ infix operator ~ {
     associativity none
 }
 
-public func ~ (lhs: NSLayoutConstraint, rhs: UILayoutPriority) -> NSLayoutConstraint {
+public func ~ (lhs: NSLayoutConstraint, rhs: LayoutPriority) -> NSLayoutConstraint {
     lhs.priority = rhs
     return lhs
 }

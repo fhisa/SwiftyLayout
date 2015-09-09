@@ -6,6 +6,7 @@
 //  Copyright © 2015 Hisakuni Fujimoto. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 public extension UILayoutSupport {
@@ -17,3 +18,4 @@ public extension UILayoutSupport {
         return layout(attribute)
     }
 }
+#endif

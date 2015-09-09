@@ -6,7 +6,11 @@
 //  Copyright (c) 2015 Hisakuni Fujimoto. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 
 public struct ConstraintTerm
 {

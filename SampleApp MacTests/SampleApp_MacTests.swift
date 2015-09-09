@@ -1,15 +1,15 @@
 //
-//  SampleApp_iOSTests.swift
-//  SampleApp-iOSTests
+//  SampleApp_MacTests.swift
+//  SampleApp MacTests
 //
 //  Created by fhisa on 2015/09/09.
 //  Copyright © 2015 Hisakuni Fujimoto. All rights reserved.
 //
 
 import XCTest
-@testable import SampleApp_iOS
+@testable import SampleApp_Mac
 
-class SampleApp_iOSTests: XCTestCase {
+class SampleApp_MacTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

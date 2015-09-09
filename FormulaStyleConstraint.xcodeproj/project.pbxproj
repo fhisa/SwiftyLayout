@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CC4AFE1D1B93C94800C9E01B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4AFE1C1B93C94800C9E01B /* Operators.swift */; };
+		CC714E1F1B9FF35B0018D1C3 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC714E1E1B9FF35B0018D1C3 /* TestHelper.swift */; settings = {ASSET_TAGS = (); }; };
+		CC714E201B9FF35B0018D1C3 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC714E1E1B9FF35B0018D1C3 /* TestHelper.swift */; settings = {ASSET_TAGS = (); }; };
 		CC9D95291B7C8A0600A6AD58 /* FormulaStyleConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = CC9D95281B7C8A0600A6AD58 /* FormulaStyleConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC9D952F1B7C8A0600A6AD58 /* FormulaStyleConstraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9D95231B7C8A0600A6AD58 /* FormulaStyleConstraint.framework */; };
 		CC9D95361B7C8A0600A6AD58 /* OperatorsWithViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D95351B7C8A0600A6AD58 /* OperatorsWithViewTests.swift */; };
@@ -42,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		CC4AFE1C1B93C94800C9E01B /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		CC714E1E1B9FF35B0018D1C3 /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		CC9D95231B7C8A0600A6AD58 /* FormulaStyleConstraint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FormulaStyleConstraint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9D95271B7C8A0600A6AD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC9D95281B7C8A0600A6AD58 /* FormulaStyleConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormulaStyleConstraint.h; sourceTree = "<group>"; };
@@ -140,6 +143,7 @@
 			children = (
 				CCA7EF991B9EC6F600DE6010 /* OperatorsWithUILayoutSupportTests.swift */,
 				CC9D95351B7C8A0600A6AD58 /* OperatorsWithViewTests.swift */,
+				CC714E1E1B9FF35B0018D1C3 /* TestHelper.swift */,
 				CC9D95331B7C8A0600A6AD58 /* Supporting Files */,
 			);
 			path = FormulaStyleConstraintTests;
@@ -350,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC714E1F1B9FF35B0018D1C3 /* TestHelper.swift in Sources */,
 				CC9D95361B7C8A0600A6AD58 /* OperatorsWithViewTests.swift in Sources */,
 				CCA7EF9A1B9EC6F600DE6010 /* OperatorsWithUILayoutSupportTests.swift in Sources */,
 			);
@@ -370,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCAF773C1B9FEE320046AE7A /* OperatorsWithViewTests.swift in Sources */,
+				CC714E201B9FF35B0018D1C3 /* TestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

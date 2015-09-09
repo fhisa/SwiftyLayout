@@ -7,17 +7,9 @@
 //
 
 #if os(iOS)
-
     import UIKit
-    typealias View = UIView
-    typealias LayoutPriority = UILayoutPriority
-
     #else
-
     import AppKit
-    typealias View = NSView
-    typealias LayoutPriority = NSLayoutPriority
-
 #endif
 
 import XCTest

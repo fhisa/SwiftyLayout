@@ -7,24 +7,28 @@
 //
 
 #if os(iOS)
-
     import UIKit
-    private typealias View = UIView
+    public extension UIView {
+
+        public func layout(attribute: NSLayoutAttribute) -> ConstraintTerm {
+            return ConstraintTerm(view: self, attribute: attribute)
+        }
+
+        public subscript(attribute: NSLayoutAttribute) -> ConstraintTerm {
+            return layout(attribute)
+        }
+    }
 
     #else
-
     import AppKit
-    private typealias View = NSView
+    public extension NSView {
 
+        public func layout(attribute: NSLayoutAttribute) -> ConstraintTerm {
+            return ConstraintTerm(view: self, attribute: attribute)
+        }
+
+        public subscript(attribute: NSLayoutAttribute) -> ConstraintTerm {
+            return layout(attribute)
+        }
+    }
 #endif
-
-public extension View {
-
-    public func layout(attribute: NSLayoutAttribute) -> ConstraintTerm {
-        return ConstraintTerm(view: self, attribute: attribute)
-    }
-
-    public subscript(attribute: NSLayoutAttribute) -> ConstraintTerm {
-        return layout(attribute)
-    }
-}

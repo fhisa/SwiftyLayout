@@ -7,8 +7,6 @@
 //
 
 import UIKit
-typealias View = UIView
-typealias ViewController = UIViewController
 
 import XCTest
 import FormulaStyleConstraint

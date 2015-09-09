@@ -3,7 +3,7 @@
 //  FormulaStyleConstraint
 //
 //  Created by fhisa on 2015/09/09.
-//  Copyright © 2015年 Hisakuni Fujimoto. All rights reserved.
+//  Copyright © 2015 Hisakuni Fujimoto. All rights reserved.
 //
 
 #if os(iOS)

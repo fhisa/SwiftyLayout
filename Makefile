@@ -1,15 +1,14 @@
-BUILDCOMMAND = xcodebuild
+BUILDCOMMAND = xctool
 PROJECT = FormulaStyleConstraint.xcodeproj
 SCHEME_IOS = FormulaStyleConstraint-iOS
 SCHEME_MACOS = FormulaStyleConstraint-Mac
 CONFIGURATION = Debug
 
-test: clean	test_ios test_macos
-
 clean:
-	$(BUILDCOMMAND) \
-	    -project $(PROJECT) \
-		clean
+	$(BUILDCOMMAND) -project $(PROJECT) -scheme $(SCHEME_IOS) clean
+	$(BUILDCOMMAND) -project $(PROJECT) -scheme $(SCHEME_MACOS) clean
+
+test: test_ios test_macos
 
 test_ios:
 	$(BUILDCOMMAND) \

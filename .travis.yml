@@ -1,17 +1,12 @@
 language: objective-c
 osx_image: xcode7
 
-before_script:
-    - brew upgrade --HEAD xctool
+# before_script:
 #     - brew update && brew upgrade xctool
 
-xcode_project: FormulaStyleConstraint.xcodeproj
-xcode_sdk:
-    - iphonesimulator
-    - macosx
-xcode_scheme:
-    - FormulaStyleConstraint-iOS
-    - FormulaStyleConstraint-Mac
+script:
+    - xctool -project FormulaStyleConstraint.xcodeproj -scheme FormulaStyleConstraint-iOS -sdk iphonesimulator test
+    - xctool -project FormulaStyleConstraint.xcodeproj -scheme FormulaStyleConstraint-Mac -sdk macosx test
 
 branches:
     only:

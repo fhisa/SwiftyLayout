@@ -1,7 +1,8 @@
 language: objective-c
 osx_image: xcode7
 
-# before_script:
+before_script:
+    - brew upgrade xctool
 #     - brew update && brew upgrade xctool
 
 xcode_project: FormulaStyleConstraint.xcodeproj

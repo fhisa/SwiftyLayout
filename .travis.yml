@@ -6,7 +6,9 @@ before_script:
 #     - brew update && brew upgrade xctool
 
 xcode_project: FormulaStyleConstraint.xcodeproj
-xcode_sdk: iphonesimulator
+xcode_sdk:
+    - iphonesimulator
+    - macosx
 xcode_scheme:
     - FormulaStyleConstraint-iOS
     - FormulaStyleConstraint-Mac

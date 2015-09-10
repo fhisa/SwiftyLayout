@@ -103,7 +103,7 @@ public struct ConstraintTerm
 
 ## Requirements
 
-- Swift 1.2 (Xcode 6.3 以降)
+- Swift 2.0 (Xcode 7 以降)
 - iOS 8 以降 / iOS 7 (ソースコードを直接コピー)
 
 ## インストール
@@ -130,8 +130,6 @@ $ carthage update --use-submodules
 
 ## TODO
 
-- UILayoutSupport 対応
-- Mac OS X 対応
 - [CocoaPods](https://cocoapods.org) 対応
 
 ## ライセンス

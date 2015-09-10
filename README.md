@@ -105,7 +105,7 @@ public struct ConstraintTerm
 
 ## Requirements
 
-- Swift 1.2 (Xcode 6.3 or later)
+- Swift 2.0 (Xcode 7 or later)
 - iOS 8 or later (by Carthage) / iOS 7 (by coping the source files directly)
 
 ## Installation
@@ -132,8 +132,6 @@ $ carthage update --use-submodules
 
 ## TODO
 
-- UILayoutSupport support
-- Mac OS X support
 - [CocoaPods](https://cocoapods.org) support
 
 ## license

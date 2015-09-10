@@ -1,4 +1,4 @@
-BUILDCOMMAND = xctool
+BUILDCOMMAND = xcodebuild
 PROJECT = FormulaStyleConstraint.xcodeproj
 SCHEME_IOS = FormulaStyleConstraint-iOS
 SCHEME_MACOS = FormulaStyleConstraint-Mac
@@ -17,7 +17,9 @@ test_ios:
 		-sdk iphonesimulator \
 		-configuration $(CONFIGURATION) \
 		build \
-		test
+		test \
+		TEST_AFTER_BUILD=YES \
+		TEST_HOST=
 
 test_macos:
 	$(BUILDCOMMAND) \
@@ -26,4 +28,6 @@ test_macos:
 		-sdk macosx \
 		-configuration $(CONFIGURATION) \
 		build \
-		test
+		test \
+		TEST_AFTER_BUILD=YES \
+		TEST_HOST=

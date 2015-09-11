@@ -1,11 +1,5 @@
 language: objective-c
 osx_image: xcode7
 
-# before_script: brew update && brew upgrade xctool
-
 script:
     make clean test
-
-branches:
-  except:
-    - 1.1

@@ -1,5 +1,8 @@
 language: objective-c
 osx_image: xcode7
-
+before_install:
+    - gem install xcpretty
+before_script:
+    - set -o pipefail
 script:
-    make clean test
+    - make clean test | xcpretty -c

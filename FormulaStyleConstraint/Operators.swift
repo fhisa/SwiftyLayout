@@ -29,67 +29,175 @@ public func ~ (lhs: NSLayoutConstraint, rhs: LayoutPriority) -> NSLayoutConstrai
     return lhs
 }
 
-public func + (var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
+public func ~ (lhs: NSLayoutConstraint, rhs: Int) -> NSLayoutConstraint {
+    return lhs ~ LayoutPriority(rhs)
+}
+
+public func ~ (lhs: NSLayoutConstraint, rhs: Double) -> NSLayoutConstraint {
+    return lhs ~ LayoutPriority(rhs)
+}
+
+// MARK: - x + c
+public func +(var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
     lhs.constant += rhs
     return lhs
 }
 
+public func +(lhs: ConstraintTerm, rhs: Int) -> ConstraintTerm {
+    return lhs + CGFloat(rhs)
+}
+
+public func +(lhs: ConstraintTerm, rhs: Double) -> ConstraintTerm {
+    return lhs + CGFloat(rhs)
+}
+
+// MARK: - c + x
 public func +(lhs: CGFloat, rhs: ConstraintTerm) -> ConstraintTerm {
     return rhs + lhs
 }
 
+public func +(lhs: Int, rhs: ConstraintTerm) -> ConstraintTerm {
+    return CGFloat(lhs) + rhs
+}
+
+public func +(lhs: Double, rhs: ConstraintTerm) -> ConstraintTerm {
+    return CGFloat(lhs) + rhs
+}
+
+// MARK: - x * c
 public func * (var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
     lhs.multiplier *= rhs
     lhs.constant *= rhs
     return lhs
 }
 
+public func * (lhs: ConstraintTerm, rhs: Int) -> ConstraintTerm {
+    return lhs * CGFloat(rhs)
+}
+
+public func * (lhs: ConstraintTerm, rhs: Double) -> ConstraintTerm {
+    return lhs * CGFloat(rhs)
+}
+
+// MARK: - c * x
 public func * (lhs: CGFloat, rhs: ConstraintTerm) -> ConstraintTerm {
     return rhs * lhs
 }
 
+public func * (lhs: Int, rhs: ConstraintTerm) -> ConstraintTerm {
+    return CGFloat(lhs) * rhs
+}
+
+public func * (lhs: Double, rhs: ConstraintTerm) -> ConstraintTerm {
+    return CGFloat(lhs) * rhs
+}
+
+// MARK: - x - c
 public func - (var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
     lhs.constant -= rhs
     return lhs
 }
 
+public func - (lhs: ConstraintTerm, rhs: Int) -> ConstraintTerm {
+    return lhs - CGFloat(rhs)
+}
+
+public func - (lhs: ConstraintTerm, rhs: Double) -> ConstraintTerm {
+    return lhs - CGFloat(rhs)
+}
+
+// MARK: - x == y
 public func == (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, relatedBy: .Equal, rhs: rhs)
 }
 
+// MARK: - x == c
 public func == (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, relatedBy: .Equal, rhs: rhs)
 }
 
+public func == (lhs: ConstraintTerm, rhs: Int) -> NSLayoutConstraint {
+    return lhs == CGFloat(rhs)
+}
+
+public func == (lhs: ConstraintTerm, rhs: Double) -> NSLayoutConstraint {
+    return lhs == CGFloat(rhs)
+}
+
+// MARK: - c == x
 public func == (lhs: CGFloat, rhs: ConstraintTerm) -> NSLayoutConstraint {
     return rhs == lhs
 }
 
+public func == (lhs: Int, rhs: ConstraintTerm) -> NSLayoutConstraint {
+    return CGFloat(lhs) == rhs
+}
+
+public func == (lhs: Double, rhs: ConstraintTerm) -> NSLayoutConstraint {
+    return CGFloat(lhs) == rhs
+}
+
+// MARK: - x <= y
 public func <= (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, relatedBy: .LessThanOrEqual, rhs: rhs)
 }
 
+// MARK: - x <= c
 public func <= (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, relatedBy: .LessThanOrEqual, rhs: rhs)
 }
 
+public func <= (lhs: ConstraintTerm, rhs: Int) -> NSLayoutConstraint {
+    return lhs <= CGFloat(rhs)
+}
+
+public func <= (lhs: ConstraintTerm, rhs: Double) -> NSLayoutConstraint {
+    return lhs <= CGFloat(rhs)
+}
+
+// MARK: - c <= x
 public func <= (lhs: CGFloat, rhs: ConstraintTerm) -> NSLayoutConstraint {
     return rhs >= lhs
 }
 
+public func <= (lhs: Int, rhs: ConstraintTerm) -> NSLayoutConstraint {
+    return CGFloat(lhs) <= rhs
+}
+
+public func <= (lhs: Double, rhs: ConstraintTerm) -> NSLayoutConstraint {
+    return CGFloat(lhs) <= rhs
+}
+
+// MARK: - x >= y
 public func >= (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, relatedBy: .GreaterThanOrEqual, rhs: rhs)
 }
 
+// MARK: - x >= c
 public func >= (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, relatedBy: .GreaterThanOrEqual, rhs: rhs)
 }
 
+public func >= (lhs: ConstraintTerm, rhs: Int) -> NSLayoutConstraint {
+    return lhs >= CGFloat(rhs)
+}
+
+public func >= (lhs: ConstraintTerm, rhs: Double) -> NSLayoutConstraint {
+    return lhs >= CGFloat(rhs)
+}
+
+// MARK: - c >= x
 public func >= (lhs: CGFloat, rhs: ConstraintTerm) -> NSLayoutConstraint {
     return rhs <= lhs
 }
 
+public func >= (lhs: Int, rhs: ConstraintTerm) -> NSLayoutConstraint {
+    return CGFloat(lhs) >= rhs
+}
 
+public func >= (lhs: Double, rhs: ConstraintTerm) -> NSLayoutConstraint {
+    return CGFloat(lhs) >= rhs
+}
 
 // MARK: - private function
 

@@ -94,6 +94,13 @@ class OperatorsWithUILayoutSupportTests: XCTestCase {
         XCTAssertEqual(x.constant,  CGFloat(-2.0))
     }
 
+    func test_operator_term_divde_constant() {
+        x = vc.topLayoutGuide[.Width] == view2[.Width] / 2
+        XCTAssertEqual(x.multiplier,  CGFloat(0.5))
+        x = view1[.Width] == vc.bottomLayoutGuide[.Width] / 2.0
+        XCTAssertEqual(x.multiplier,  CGFloat(0.5))
+    }
+
     func test_operator_term_equal_term() {
         x = view1[.Width] == 12 * vc.topLayoutGuide[.Width] + 34
         XCTAssertTrue(x.isKindOfClass(NSLayoutConstraint))

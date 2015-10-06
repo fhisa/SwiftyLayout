@@ -106,6 +106,21 @@ public func - (lhs: ConstraintTerm, rhs: Double) -> ConstraintTerm {
     return lhs - CGFloat(rhs)
 }
 
+// MARK: - x / c
+public func / (var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
+    lhs.multiplier /= rhs
+    lhs.constant /= rhs
+    return lhs
+}
+
+public func / (lhs: ConstraintTerm, rhs: Int) -> ConstraintTerm {
+    return lhs / CGFloat(rhs)
+}
+
+public func / (lhs: ConstraintTerm, rhs: Double) -> ConstraintTerm {
+    return lhs / CGFloat(rhs)
+}
+
 // MARK: - x == y
 public func == (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
     return createLayoutConstraint(lhs, relatedBy: .Equal, rhs: rhs)

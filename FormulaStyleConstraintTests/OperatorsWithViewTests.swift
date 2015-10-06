@@ -155,6 +155,37 @@ class OperatorsWithUIViewTests: XCTestCase {
         XCTAssertEqual(x.constant,  CGFloat(-floatval))
     }
 
+    func test_operator_term_divide_constant() {
+        x = view1[.Width] == view2[.Width] / 2
+        XCTAssertEqual(x.multiplier,  CGFloat(0.5))
+
+        x = view1[.Width] == view2[.Width] / 2.0
+        XCTAssertEqual(x.multiplier,  CGFloat(0.5))
+
+        let intval = 2
+        x = view1[.Width] == view2[.Width] / intval
+        XCTAssertEqual(x.multiplier,  CGFloat(1) / CGFloat(intval))
+
+        let floatval = 2.0
+        x = view1[.Width] == view2[.Width] / floatval
+        XCTAssertEqual(x.multiplier,  CGFloat(1.0 / floatval))
+    }
+
+    func test_operator_divide_for_ratio() {
+        x = view1[.Height] / 3 == view1[.Width] / 4
+        XCTAssertEqual(x.multiplier,  CGFloat(3) / CGFloat(4))
+        x = view1[.Height] / 9.0 == view1[.Width] / 16.0
+        XCTAssertEqual(x.multiplier,  CGFloat(9.0) / CGFloat(16.0))
+
+        let intval_a = 3, intval_b = 4
+        x = view1[.Height] / intval_a == view1[.Width] / intval_b
+        XCTAssertEqual(x.multiplier,  CGFloat(intval_a) / CGFloat(intval_b))
+
+        let floatval_a = 9.0, floatval_b = 16.0
+        x = view1[.Height] / floatval_a == view1[.Width] / floatval_b
+        XCTAssertEqual(x.multiplier,  CGFloat(floatval_a / floatval_b))
+    }
+    
     func test_operator_term_equal_constant() {
         x = view1[.Width] == 1234
         XCTAssertTrue(x.isKindOfClass(NSLayoutConstraint))

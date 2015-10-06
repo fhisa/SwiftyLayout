@@ -1,5 +1,9 @@
 # CHANGES
 
+## 2.1.0
+
+* [NEW] Added division operator "/"
+
 ## 2.0.1
 
 * [FIX] Fixed a bug that non-literal value can't use (issue #4)

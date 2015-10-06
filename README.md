@@ -92,6 +92,7 @@ public struct ConstraintTerm
 | -     | ConstraintTerm | CONSTANT       | ConstraintTerm | subtract rhs value from lhs.constant |
 | *     | ConstraintTerm | CONSTANT       | ConstraintTerm | multiply rhs value to lhs.multiplier and lhs.constant |
 | *     | CONSTANT       | ConstraintTerm | ConstraintTerm | multiply lhs value to rhs.multiplier and rhs.constant |
+| /     | ConstraintTerm | CONSTANT       | ConstraintTerm | divide lhs.multiplier and lhs.constant by rhs value |
 | ==    | ConstraintTerm | ConstraintTerm | NSLayoutConstraint | create a layout constraint that "lhs is equal to lhs" |
 | ==    | ConstraintTerm | CONSTANT       | NSLayoutConstraint | ditto |
 | ==    | CONSTANT       | ConstraintTerm | NSLayoutConstraint | ditto |

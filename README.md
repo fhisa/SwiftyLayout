@@ -9,6 +9,8 @@
 
 FormulaStyleConstraint is a framework that allows to describe layout constraints (ie NSLayoutConstraint) as a simple mathematical formula in a Swift program.
 
+(**NOTICE!** - The project and framework are scheduled to be renamed in the next major version up)
+
 ## Code Examples
 
 ### Basic usage

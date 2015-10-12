@@ -1,5 +1,9 @@
 # CHANGES
 
+## 3.0.0-alpha.1
+
+The framework and project was renamed SwiftyLayout (old name was FormulaStyleConstraint)
+
 ## 2.1.0
 
 * [NEW] Added division operator "/"

@@ -1,22 +1,18 @@
-# FormulaStyleConstraint
+# SwiftyLayout
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/fhisa/FormulaStyleConstraint/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/fhisa/SwiftyLayout/master/LICENSE)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![GitHub release](https://img.shields.io/github/release/fhisa/FormulaStyleConstraint.svg)](https://github.com/fhisa/FormulaStyleConstraint/releases)
-[![build passing](https://travis-ci.org/fhisa/FormulaStyleConstraint.png?branch=master)](https://travis-ci.org/fhisa/FormulaStyleConstraint)
+[![GitHub release](https://img.shields.io/github/release/fhisa/SwiftyLayout.svg)](https://github.com/fhisa/SwiftyLayout/releases)
+[![build passing](https://travis-ci.org/fhisa/SwiftyLayout.png?branch=master)](https://travis-ci.org/fhisa/SwiftyLayout)
 
-[![Join the chat at https://gitter.im/fhisa/FormulaStyleConstraint](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fhisa/FormulaStyleConstraint?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/fhisa/SwiftyLayout](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fhisa/SwiftyLayout?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-FormulaStyleConstraint は、Swiftプログラムにおいて、レイアウト制約 (NSLayoutConstraint) を簡単な数式として定義できるようにするフレームワークです。
-
-## 注意！
-
-**次期メジャーバージョンアップで、フレームワーク名とプロジェクト名を変更する予定です。**
+SwiftyLayout は、Swiftプログラムにおいて、レイアウト制約(NSLayoutConstraint)を簡単な数式として定義できるようにするフレームワークです。
 
 ## コード例
 
 ### 基本的な使い方
-「ビューAの横幅はビューBの横幅の50%から4.0引いたものと等しい」というレイアウト制約は、FormulaStyleConstraintフレームワークを使って:
+「ビューAの横幅はビューBの横幅の50%から4.0引いたものと等しい」というレイアウト制約は、SwiftyLayoutフレームワークを使って:
 ```swift
 viewA[.Width] == 0.5 * viewB[.Width] - 4.0
 ```
@@ -60,7 +56,7 @@ constraint.priority = 750.0
 // -> constraint
 ```
 
-[サンプルアプリ](https://github.com/fhisa/FormulaStyleConstraint/blob/master/SampleApp/ViewController.swift)や[テストケース](https://github.com/fhisa/FormulaStyleConstraint/blob/master/FormulaStyleConstraintTests/FormulaStyleConstraintTests.swift)のコードも参考にしてください。
+[サンプルアプリ](https://github.com/fhisa/SwiftyLayout/blob/master/SampleApp/ViewController.swift)や[テストケース](https://github.com/fhisa/SwiftyLayout/blob/master/SwiftyLayoutTests/SwiftyLayoutTests.swift)のコードも参考にしてください。
 
 ## リファレンスガイド
 
@@ -110,16 +106,20 @@ public struct ConstraintTerm
 
 - Swift 2.0 (Xcode 7 以降)
 - iOS 8 以降 / iOS 7 (ソースコードを直接コピー)
+- iOS
+  - iOS 8 以降 / iOS 7 (ソースコードを直接コピー)
+- Mac
+  - Mac OS X 10.10 以降 / 10.9 以前での動作は不明
 
 ## インストール
 
 2種類の方法があります。
 
-### Carthage を使ってインストール (iOS 8 以降)
+### Carthage を使ってインストール
 
-FormulaStyleConstraint は [Carthage](https://github.com/Carthage/Carthage) を使うと簡単にプロジェクトに追加できます。
+SwiftyLayout は [Carthage](https://github.com/Carthage/Carthage) を使うと簡単にプロジェクトに追加できます。
 
-- Cartfile に `github "fhisa/FormulaStyleConstraint"` の1行を追加
+- Cartfile に `github "fhisa/SwiftyLayout"` の1行を追加
 - `carthage update` を実行
 - Carthage/Build の中にできたフレームワークをプロジェクトに追加
 
@@ -127,11 +127,11 @@ FormulaStyleConstraint は [Carthage](https://github.com/Carthage/Carthage) を�
 
 - Add this repository as a git submodule:
 ```shell
-$ git submodule add https://github.com/fhisa/FormulaStyleConstraint.git PATH_TO_SUBMODULE
+$ git submodule add https://github.com/fhisa/SwiftyLayout.git PATH_TO_SUBMODULE
 // or
 $ carthage update --use-submodules
 ```
-- Then just add references of FormulaStyleConstraint/*.swift to your Xcode project.
+- Then just add references of SwiftyLayout/*.swift to your Xcode project.
 
 ## TODO
 
@@ -139,4 +139,4 @@ $ carthage update --use-submodules
 
 ## ライセンス
 
-FormulaStyleConstraint は [MIT license](https://github.com/fhisa/FormulaStyleConstraint/blob/master/LICENSE) の元で配布しています。
+SwiftyLayout は [MIT license](https://github.com/fhisa/SwiftyLayout/blob/master/LICENSE) の元で配布しています。

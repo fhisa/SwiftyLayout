@@ -1,7 +1,7 @@
 BUILDCOMMAND = xcodebuild
-PROJECT = FormulaStyleConstraint.xcodeproj
-SCHEME_IOS = FormulaStyleConstraint-iOS
-SCHEME_MACOS = FormulaStyleConstraint-Mac
+PROJECT = SwiftyLayout.xcodeproj
+SCHEME_IOS = SwiftyLayout-iOS
+SCHEME_MACOS = SwiftyLayout-Mac
 CONFIGURATION = Debug
 
 clean:

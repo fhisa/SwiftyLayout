@@ -9,6 +9,8 @@
 
 SwiftyLayout is a framework that allows to describe layout constraints (ie NSLayoutConstraint) as a simple mathematical formula in a Swift program.
 
+**[NOTICE]** *The framework was renamed to SwiftyLayout (Formerly FormulaStyleConstraint) influenced by [Swifty Methods](https://realm.io/news/swift-summit-swifty-methods-clarity-brevity/).*
+
 ## Code Examples
 
 ### Basic usage

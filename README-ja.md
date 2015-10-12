@@ -9,6 +9,8 @@
 
 SwiftyLayout は、Swiftプログラムにおいて、レイアウト制約(NSLayoutConstraint)を簡単な数式として定義できるようにするフレームワークです。
 
+**[注意]** *[Swifty Methods](https://realm.io/news/swift-summit-swifty-methods-clarity-brevity/)([日本語訳](https://realm.io/jp/news/swift-summit-swifty-methods-clarity-brevity/))の影響を受けて、フレームワーク名を SwiftyLayout に変更しました。(旧名は FormulaStyleConstraint)*
+
 ## コード例
 
 ### 基本的な使い方

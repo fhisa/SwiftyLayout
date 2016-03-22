@@ -38,7 +38,8 @@ public func ~ (lhs: NSLayoutConstraint, rhs: Double) -> NSLayoutConstraint {
 }
 
 // MARK: - x + c
-public func +(var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
+public func +(lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
+    var lhs = lhs
     lhs.constant += rhs
     return lhs
 }
@@ -65,7 +66,8 @@ public func +(lhs: Double, rhs: ConstraintTerm) -> ConstraintTerm {
 }
 
 // MARK: - x * c
-public func * (var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
+public func * (lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
+    var lhs = lhs
     lhs.multiplier *= rhs
     lhs.constant *= rhs
     return lhs
@@ -93,7 +95,8 @@ public func * (lhs: Double, rhs: ConstraintTerm) -> ConstraintTerm {
 }
 
 // MARK: - x - c
-public func - (var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
+public func - (lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
+    var lhs = lhs
     lhs.constant -= rhs
     return lhs
 }
@@ -107,7 +110,8 @@ public func - (lhs: ConstraintTerm, rhs: Double) -> ConstraintTerm {
 }
 
 // MARK: - x / c
-public func / (var lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
+public func / (lhs: ConstraintTerm, rhs: CGFloat) -> ConstraintTerm {
+    var lhs = lhs
     lhs.multiplier /= rhs
     lhs.constant /= rhs
     return lhs

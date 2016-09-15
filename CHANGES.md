@@ -1,5 +1,13 @@
 # CHANGES
 
+## 3.0.2
+
+Support Swift 2.3 & Xcode 8
+
+## 3.0.1
+
+Support Swift 2.2
+
 ## 3.0.0-alpha.1
 
 The framework and project was renamed SwiftyLayout (old name was FormulaStyleConstraint)

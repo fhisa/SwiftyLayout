@@ -18,11 +18,12 @@
 
 #endif
 
-
-infix operator ~ {
-    precedence 100
-    associativity none
+precedencegroup LayoutPriorityPrecedence {
+    associativity: right
+    higherThan: AssignmentPrecedence
 }
+infix operator ~ : LayoutPriorityPrecedence
+
 
 public func ~ (lhs: NSLayoutConstraint, rhs: LayoutPriority) -> NSLayoutConstraint {
     lhs.priority = rhs
@@ -127,12 +128,12 @@ public func / (lhs: ConstraintTerm, rhs: Double) -> ConstraintTerm {
 
 // MARK: - x == y
 public func == (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, relatedBy: .Equal, rhs: rhs)
+    return createLayoutConstraint(lhs: lhs, relatedBy: .equal, rhs: rhs)
 }
 
 // MARK: - x == c
 public func == (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, relatedBy: .Equal, rhs: rhs)
+    return createLayoutConstraint(lhs: lhs, relatedBy: .equal, rhs: rhs)
 }
 
 public func == (lhs: ConstraintTerm, rhs: Int) -> NSLayoutConstraint {
@@ -158,12 +159,12 @@ public func == (lhs: Double, rhs: ConstraintTerm) -> NSLayoutConstraint {
 
 // MARK: - x <= y
 public func <= (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, relatedBy: .LessThanOrEqual, rhs: rhs)
+    return createLayoutConstraint(lhs: lhs, relatedBy: .lessThanOrEqual, rhs: rhs)
 }
 
 // MARK: - x <= c
 public func <= (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, relatedBy: .LessThanOrEqual, rhs: rhs)
+    return createLayoutConstraint(lhs: lhs, relatedBy: .lessThanOrEqual, rhs: rhs)
 }
 
 public func <= (lhs: ConstraintTerm, rhs: Int) -> NSLayoutConstraint {
@@ -189,12 +190,12 @@ public func <= (lhs: Double, rhs: ConstraintTerm) -> NSLayoutConstraint {
 
 // MARK: - x >= y
 public func >= (lhs: ConstraintTerm, rhs: ConstraintTerm) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, relatedBy: .GreaterThanOrEqual, rhs: rhs)
+    return createLayoutConstraint(lhs: lhs, relatedBy: .greaterThanOrEqual, rhs: rhs)
 }
 
 // MARK: - x >= c
 public func >= (lhs: ConstraintTerm, rhs: CGFloat) -> NSLayoutConstraint {
-    return createLayoutConstraint(lhs, relatedBy: .GreaterThanOrEqual, rhs: rhs)
+    return createLayoutConstraint(lhs: lhs, relatedBy: .greaterThanOrEqual, rhs: rhs)
 }
 
 public func >= (lhs: ConstraintTerm, rhs: Int) -> NSLayoutConstraint {
@@ -236,7 +237,7 @@ private func createLayoutConstraint(lhs: ConstraintTerm, relatedBy: NSLayoutRela
     let constraint = NSLayoutConstraint(
         item: lhs.view!, attribute: lhs.attribute,
         relatedBy: relatedBy,
-        toItem: nil, attribute: .NotAnAttribute,
+        toItem: nil, attribute: .notAnAttribute,
         multiplier: 1.0, constant: constant)
     return constraint
 }

@@ -15,7 +15,7 @@ public extension UILayoutSupport {
     }
 
     public subscript(attribute: NSLayoutAttribute) -> ConstraintTerm {
-        return layout(attribute)
+        return layout(attribute: attribute)
     }
 }
 #endif

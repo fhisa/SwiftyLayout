@@ -1,5 +1,9 @@
 # CHANGES
 
+## 4.0.0
+
+Update for Swift 3 and Xcode 8. This version isn't available for Swift 2.
+
 ## 3.0.2
 
 Support Swift 2.3 & Xcode 8

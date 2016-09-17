@@ -21,7 +21,7 @@ public struct ConstraintTerm
 
     public init(
         view v: AnyObject? = nil,
-        attribute a: NSLayoutAttribute = .NotAnAttribute,
+        attribute a: NSLayoutAttribute = .notAnAttribute,
         multiplier m: CGFloat = 1.0,
         constant c: CGFloat = 0.0)
     {
